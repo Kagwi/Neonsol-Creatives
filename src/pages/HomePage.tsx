@@ -11,66 +11,68 @@ function HomePage() {
   return (
     <>
       {/* Hero Section */}
-      <section className="relative min-h-screen bg-gradient-to-br from-secondary-950 to-secondary-900 flex items-center">
+        <section className="relative min-h-screen bg-gradient-to-br from-secondary-950 to-secondary-900 flex items-center">
         <div className="absolute inset-0 overflow-hidden">
-          <div className="grid grid-cols-5 grid-rows-5 h-full w-full opacity-10">
-            {Array.from({ length: 25 }).map((_, i) => (
-              <div 
-                key={i}
-                className="border border-primary-600/30"
-                style={{
-                  animation: `pulse ${7 + Math.random() * 5}s infinite ${Math.random() * 5}s ease-in-out`,
-                }}
-              ></div>
-            ))}
+        <div className="grid grid-cols-5 grid-rows-5 h-full w-full opacity-10">
+        {Array.from({ length: 25 }).map((_, i) => (
+          <div 
+          key={i}
+          className="border border-primary-600/30"
+          style={{
+            animation: `pulse ${7 + Math.random() * 5}s infinite ${Math.random() * 5}s ease-in-out`,
+          }}
+          ></div>
+          ))}
+        </div>
+    </div>
+
+  <div className="container mx-auto px-4 pt-24 pb-16 lg:pb-32 relative z-10">
+    <div className="flex flex-col lg:flex-row lg:items-center">
+      <div className="lg:w-1/2 mb-12 lg:mb-0 animate-slide-up">
+        <div className="inline-flex items-center px-4 py-2 bg-primary-600/10 rounded-full text-primary-600 text-sm font-medium mb-6">
+          <Zap size={16} className="mr-2" />
+          Where creativity meets innovation
+        </div>
+        <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white leading-tight mb-6">
+          Innovative Tech <br />
+          <span className="text-primary-600">Solutions</span> for <br />
+          Tomorrow's Challenges
+        </h1>
+        <p className="text-secondary-300 text-lg mb-8 max-w-lg">
+          We create cutting-edge technology solutions that help businesses thrive in the digital age. Discover how our expertise can transform your ideas into reality.
+        </p>
+        <div className="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4 animate-slide-up" style={{ animationDelay: '150ms' }}>
+          <Button to="/services" variant="primary" size="lg">
+            Explore Our Services
+          </Button>
+          <Button to="/contact" variant="outline" size="lg">
+            Get in Touch
+          </Button>
+        </div>
+      </div>
+
+      <div className="lg:w-1/2 relative">
+        <div className="relative rounded-xl overflow-hidden shadow-lg animate-fade-in">
+          <img 
+            src="https://images.pexels.com/photos/3183150/pexels-photo-3183150.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" 
+            alt="Neonsol Creatives Team at Work" 
+            className="w-full h-auto rounded-xl"
+          />
+        </div>
+        <div className="absolute -bottom-6 -left-6 bg-white p-4 rounded-lg shadow-md flex items-center space-x-4 animate-slide-up" style={{ animationDelay: '300ms' }}>
+          <div className="h-12 w-12 bg-primary-50 rounded-full flex items-center justify-center">
+            <Zap size={24} className="text-primary-600" />
+          </div>
+          <div>
+            <div className="text-secondary-800 font-semibold">10+ Years</div>
+            <div className="text-secondary-600 text-sm">Industry Experience</div>
           </div>
         </div>
-        <div className="container mx-auto px-4 pt-24 pb-16 lg:pb-32 relative z-10">
-          <div className="flex flex-col lg:flex-row lg:items-center">
-            <div className="lg:w-1/2 mb-12 lg:mb-0 animate-slide-up">
-              <div className="inline-flex items-center px-4 py-2 bg-primary-600/10 rounded-full text-primary-600 text-sm font-medium mb-6">
-                <Zap size={16} className="mr-2" />
-                Pioneering Technology Solutions
-              </div>
-              <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white leading-tight mb-6">
-                Innovative Tech <br />
-                <span className="text-primary-600">Solutions</span> for <br />
-                Tomorrow's Challenges
-              </h1>
-              <p className="text-secondary-300 text-lg mb-8 max-w-lg">
-                We create cutting-edge technology solutions that help businesses thrive in the digital age. Discover how our expertise can transform your ideas into reality.
-              </p>
-              <div className="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
-                <Button to="/services" variant="primary" size="lg">
-                  Explore Our Services
-                </Button>
-                <Button to="/contact" variant="outline" size="lg">
-                  Get in Touch
-                </Button>
-              </div>
-            </div>
-            <div className="lg:w-1/2 relative">
-              <div className="relative rounded-xl overflow-hidden shadow-lg animate-fade-in">
-                <img 
-                  src="https://images.pexels.com/photos/3183150/pexels-photo-3183150.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" 
-                  alt="Neonsol Creatives Team at Work" 
-                  className="w-full h-auto rounded-xl"
-                />
-                <div className="absolute inset-0 bg-gradient-to-tr from-primary-600/30 to-transparent"></div>
-              </div>
-              <div className="absolute -bottom-6 -left-6 bg-white p-4 rounded-lg shadow-md flex items-center space-x-4 animate-slide-up" style={{ animationDelay: '300ms' }}>
-                <div className="h-12 w-12 bg-primary-50 rounded-full flex items-center justify-center">
-                  <Zap size={24} className="text-primary-600" />
-                </div>
-                <div>
-                  <div className="text-secondary-800 font-semibold">10+ Years</div>
-                  <div className="text-secondary-600 text-sm">Industry Experience</div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+      </div>
+    </div>
+  </div>
+</section>
+     
 
       {/* Services Section */}
       <section className="py-24 bg-secondary-50">
