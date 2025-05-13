@@ -57,7 +57,7 @@ function HomePage() {
       <div className="lg:w-1/2 relative">
         <div className="relative rounded-xl overflow-hidden shadow-lg animate-fade-in" style={{ animationDelay: '500ms' }}>
           <img 
-            src="/public/Neonsol%20Sample%202.webp" 
+            src="https://raw.githubusercontent.com/Kagwi/Neonsol-Creatives/refs/heads/main/public/Neonsol%20Sample%202.webp" 
             alt="Neonsol Creatives Team at Work" 
             className="w-full h-auto rounded-xl"
           />
