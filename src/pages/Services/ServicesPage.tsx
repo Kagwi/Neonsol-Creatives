@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 import { ArrowRight, CheckCircle2 } from 'lucide-react';
-import Button from '../components/Button';
-import ServiceCard from '../components/ServiceCard';
-import { services } from '../data/services';
+import Button from '../../components/Button';
+import ServiceCard from '../../components/ServiceCard';
+import { services } from '../../data/services';
 
 function ServicesPage() {
   const [activeTab, setActiveTab] = useState('all');
@@ -42,8 +42,8 @@ function ServicesPage() {
                 title={service.title}
                 description={service.description}
                 icon={service.icon}
-                delay={index * 100}
-              />
+                delay={index * 100} 
+                link={service.link} />
             ))}
           </div>
         </div>
