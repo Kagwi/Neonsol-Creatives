@@ -33,7 +33,7 @@ function HomePage() {
       <div className="lg:w-1/2 mb-12 lg:mb-0 animate-slide-up" style={{ animationDelay: '300ms' }}>
         <div className="inline-flex items-center px-4 py-2 bg-primary-600/10 rounded-full text-primary-600 text-sm font-medium mb-6">
           <Zap size={16} className="mr-2" />
-          Where creativity meets innovation
+          Where Creativity Meets Innovation
         </div>
         <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white leading-tight mb-6">
           Innovative Tech <br />
@@ -53,6 +53,30 @@ function HomePage() {
         </div>
       </div>
 
+      {/* RIGHT IMAGE BLOCK */}
+      <div className="lg:w-1/2 relative">
+        <div className="relative rounded-xl overflow-hidden shadow-lg animate-fade-in" style={{ animationDelay: '500ms' }}>
+          <img 
+            src="https://images.pexels.com/photos/3183150/pexels-photo-3183150.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" 
+            alt="Neonsol Creatives Team at Work" 
+            className="w-full h-auto rounded-xl"
+          />
+        </div>
+        <div className="absolute -bottom-6 -left-6 bg-white p-4 rounded-lg shadow-md flex items-center space-x-4 animate-slide-up" style={{ animationDelay: '1200ms' }}>
+          <div className="h-12 w-12 bg-primary-50 rounded-full flex items-center justify-center">
+            <Zap size={24} className="text-primary-600" />
+          </div>
+          <div>
+            <div className="text-secondary-800 font-semibold">Future-Driven</div>
+            <div className="text-secondary-600 text-sm">Delivering Tomorrow’s Tech Today</div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+  
       {/* RIGHT IMAGE BLOCK */}
       <div className="lg:w-1/2 relative">
         <div className="relative rounded-xl overflow-hidden shadow-lg animate-fade-in" style={{ animationDelay: '500ms' }}>
