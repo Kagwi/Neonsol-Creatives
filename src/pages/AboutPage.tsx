@@ -1,90 +1,180 @@
-// src/pages/AboutPage.jsx
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { ArrowRight } from 'lucide-react';
 import Button from '../components/Button';
-import CountUp from 'react-countup';
-import TeamMemberCard from '../components/TeamMemberCard';
-import { teamMembers } from '../data/team';
 
 function AboutPage() {
+  // State for count up animation
+  const [years, setYears] = useState(0);
+  const [projects, setProjects] = useState(0);
+  const [team, setTeam] = useState(0);
+  const [satisfaction, setSatisfaction] = useState(0);
+
+  useEffect(() => {
+    const endYears = 10;
+    const endProjects = 200;
+    const endTeam = 50;
+    const endSatisfaction = 98;
+
+    const duration = 5000; // slower animation duration in ms
+    const steps = 100;
+    const stepTime = Math.floor(duration / steps);
+
+    const increment = (setter, end) => {
+      let count = 0;
+      const incrementValue = end / steps;
+      const timer = setInterval(() => {
+        count += incrementValue;
+        if (count >= end) {
+          setter(end);
+          clearInterval(timer);
+        } else {
+          setter(Math.round(count));
+        }
+      }, stepTime);
+    };
+
+    increment(setYears, endYears);
+    increment(setProjects, endProjects);
+    increment(setTeam, endTeam);
+    increment(setSatisfaction, endSatisfaction);
+  }, []);
+
   return (
     <>
-      {/* Hero Section with Background Image */}
+      {/* Hero Section with background image */}
       <section
-        className="pt-32 pb-20 bg-cover bg-center text-white"
+        className="pt-32 pb-20 text-white bg-cover bg-center relative"
         style={{
-          backgroundImage: "url('https://images.unsplash.com/photo-1549921296-3a6b90b2b2b3?auto=compress&cs=tinysrgb&dpr=2&w=1600')",
+          backgroundImage:
+            "url('https://images.pexels.com/photos/3184292/pexels-photo-3184292.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2')",
         }}
       >
-        <div className="container mx-auto px-4 backdrop-blur-sm bg-black/40 rounded-lg py-10">
-          <div className="max-w-3xl">
-            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold mb-6">
-              About <span className="text-primary-500">Neonsol</span> Creatives
-            </h1>
-            <p className="text-secondary-100 text-xl">
-              We transform ideas into impactful digital solutions that empower businesses and inspire innovation.
-            </p>
+        {/* Overlay */}
+        <div className="absolute inset-0 bg-black bg-opacity-60"></div>
+
+        <div className="container mx-auto px-4 relative z-10 max-w-3xl">
+          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold mb-6 animate-slide-up">
+            About <span className="text-primary-600">Neonsol</span> Creatives
+          </h1>
+          <p
+            className="text-secondary-200 text-xl mb-8 animate-slide-up"
+            style={{ animationDelay: '200ms' }}
+          >
+            We're a team of passionate technologists dedicated to creating innovative solutions that help businesses thrive in the digital era.
+          </p>
+        </div>
+      </section>
+
+      {/* Mission and Vision Section */}
+      <section className="py-20 bg-gradient-to-br from-secondary-50 to-white">
+        <div className="container mx-auto px-4 max-w-4xl">
+          <div className="grid md:grid-cols-2 gap-16 text-center">
+            <div>
+              <h2 className="text-3xl font-bold text-secondary-900 mb-4">Our Mission</h2>
+              <p className="text-secondary-600 leading-relaxed">
+                To empower businesses worldwide by delivering innovative, reliable, and scalable digital solutions that drive success and foster growth.
+              </p>
+            </div>
+            <div>
+              <h2 className="text-3xl font-bold text-secondary-900 mb-4">Our Vision</h2>
+              <p className="text-secondary-600 leading-relaxed">
+                To be a global leader in digital innovation, recognized for transforming ideas into impactful technologies that shape the future.
+              </p>
+            </div>
           </div>
         </div>
       </section>
 
-      {/* Mission & Vision Section */}
-      <section className="py-20 bg-gradient-to-br from-secondary-50 to-white text-secondary-900">
-        <div className="container mx-auto px-4 grid md:grid-cols-2 gap-10">
-          <div>
-            <h2 className="text-3xl font-bold mb-4">Our Mission</h2>
-            <p className="text-secondary-700 text-lg leading-relaxed">
-              To deliver cutting-edge digital experiences that solve real-world problems and fuel growth for our clients.
-            </p>
-          </div>
-          <div>
-            <h2 className="text-3xl font-bold mb-4">Our Vision</h2>
-            <p className="text-secondary-700 text-lg leading-relaxed">
-              To become a globally recognized creative tech powerhouse known for innovation, impact, and excellence.
-            </p>
+      {/* Our Story Section */}
+      <section className="py-20 bg-white">
+        <div className="container mx-auto px-4">
+          <div className="flex flex-col lg:flex-row items-center">
+            <div className="lg:w-1/2 mb-12 lg:mb-0">
+              <img
+                src="https://images.pexels.com/photos/3184292/pexels-photo-3184292.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+                alt="Neonsol Creatives Office"
+                className="rounded-lg shadow-medium"
+              />
+            </div>
+            <div className="lg:w-1/2 lg:pl-16">
+              <span className="inline-block px-3 py-1 bg-primary-50 text-primary-600 rounded-full text-sm font-medium mb-4">
+                Our Story
+              </span>
+              <h2 className="text-3xl sm:text-4xl font-bold text-secondary-900 mb-6">
+                A Journey of Innovation and Excellence
+              </h2>
+              <p className="text-secondary-600 mb-6 leading-relaxed">
+                Founded in 2015 by Sandra Chen, Neonsol Creatives began with a simple yet ambitious vision: to bridge the gap between cutting-edge technology and creative problem-solving. What started as a small team working out of a co-working space has grown into a thriving company with a global presence and a diverse portfolio of clients.
+              </p>
+              <p className="text-secondary-600 mb-6 leading-relaxed">
+                Over the years, we've remained true to our founding principles: innovation, quality, and client satisfaction. Our team has expanded to include some of the brightest minds in the industry, all united by a passion for creating technology solutions that make a difference.
+              </p>
+              <p className="text-secondary-600 mb-8 leading-relaxed">
+                Today, Neonsol Creatives stands as a leader in the tech industry, known for our forward-thinking approach and commitment to excellence. We continue to push boundaries, explore new possibilities, and help our clients navigate the ever-evolving digital landscape.
+              </p>
+            </div>
           </div>
         </div>
       </section>
 
-      {/* Stats Section with Background Video */}
-      <section className="relative py-20 bg-black text-white overflow-hidden">
+      {/* Values Section */}
+      <section className="py-20 bg-secondary-50">
+        <div className="container mx-auto px-4">
+          <div className="max-w-3xl mx-auto text-center mb-16">
+            <span className="inline-block px-3 py-1 bg-primary-50 text-primary-600 rounded-full text-sm font-medium mb-4">
+              Our Values
+            </span>
+            <h2 className="text-3xl sm:text-4xl font-bold text-secondary-900 mb-6">The Principles That Guide Us</h2>
+            <p className="text-secondary-600 text-lg leading-relaxed">
+              At Neonsol Creatives, our values define who we are and how we approach our work every day.
+            </p>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {/* ... Your existing value cards ... */}
+          </div>
+        </div>
+      </section>
+
+      {/* Stats Section with background video and count-up */}
+      <section className="relative py-20 text-white overflow-hidden bg-black">
+        {/* Background video */}
         <video
           autoPlay
-          muted
           loop
+          muted
+          className="absolute inset-0 w-full h-full object-cover opacity-30"
+          src="https://cdn.videvo.net/videvo_files/video/free/2017-06/small_watermarked/170520_City_Night_03_1080p_preview.webm"
+          type="video/webm"
           playsInline
-          className="absolute inset-0 w-full h-full object-cover opacity-30 z-0"
-        >
-          <source src="/videos/city-night.mp4" type="video/mp4" />
-        </video>
-        <div className="relative z-10 container mx-auto px-4">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 text-center">
-            {[
-              { label: 'Years Experience', end: 10 },
-              { label: 'Projects Completed', end: 200 },
-              { label: 'Team Members', end: 50 },
-              { label: 'Client Satisfaction', end: 98, suffix: '%' },
-            ].map((item, index) => (
-              <div key={index}>
-                <div className="text-primary-400 text-5xl font-bold mb-2">
-                  <CountUp end={item.end} duration={5} suffix={item.suffix || ''} />
-                </div>
-                <div className="text-secondary-200 text-lg">{item.label}</div>
-              </div>
-            ))}
+        />
+        <div className="absolute inset-0 bg-black opacity-70"></div>
+        <div className="relative container mx-auto px-4">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 text-center z-10 relative">
+            <div>
+              <div className="text-primary-600 text-5xl font-bold mb-2">{years}+</div>
+              <div className="text-secondary-300 text-lg">Years Experience</div>
+            </div>
+            <div>
+              <div className="text-primary-600 text-5xl font-bold mb-2">{projects}+</div>
+              <div className="text-secondary-300 text-lg">Projects Completed</div>
+            </div>
+            <div>
+              <div className="text-primary-600 text-5xl font-bold mb-2">{team}+</div>
+              <div className="text-secondary-300 text-lg">Team Members</div>
+            </div>
+            <div>
+              <div className="text-primary-600 text-5xl font-bold mb-2">{satisfaction}%</div>
+              <div className="text-secondary-300 text-lg">Client Satisfaction</div>
+            </div>
           </div>
         </div>
       </section>
-
-      {/* Optional Team or Story Section could go here */}
 
       {/* CTA Section */}
       <section className="py-20 bg-gradient-to-br from-primary-50 to-secondary-100">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-3xl sm:text-4xl font-bold text-secondary-900 mb-6">
-              Ready to Work With Us?
-            </h2>
+            <h2 className="text-3xl sm:text-4xl font-bold text-secondary-900 mb-6">Ready to Work With Us?</h2>
             <p className="text-secondary-700 text-lg mb-8 max-w-2xl mx-auto">
               Let's collaborate on your next project. Reach out to our team to discuss how we can help you achieve your goals.
             </p>
