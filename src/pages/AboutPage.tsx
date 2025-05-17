@@ -64,25 +64,24 @@ function AboutPage() {
       </section>
 
       {/* Mission and Vision Section */}
-      <section className="py-20 bg-white">
-        <div className="container mx-auto px-4 max-w-6xl">
-          <div className="grid md:grid-cols-2 gap-12">
-            <div className="bg-primary-50 p-8 rounded-xl shadow-sm">
-              <h2 className="text-3xl font-bold text-primary-600 mb-4">Our Mission</h2>
-              <p className="text-secondary-600 leading-relaxed">
-                To empower businesses through innovative digital solutions that drive growth and create lasting value. We combine technical excellence with deep industry knowledge to deliver transformative results.
-              </p>
-            </div>
-            <div className="bg-secondary-800 p-8 rounded-xl shadow-sm text-white">
-              <h2 className="text-3xl font-bold text-primary-400 mb-4">Our Vision</h2>
-              <p className="text-secondary-200 leading-relaxed">
-                To be the global leader in digital innovation, shaping a future where technology elevates human potential and creates sustainable value for all stakeholders.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
+       <section className="py-20 bg-black">
+  <div className="container mx-auto px-4 max-w-6xl">
+    <div className="grid md:grid-cols-2 gap-12">
+      <div className="bg-black p-8 rounded-xl shadow-sm border border-gray-800">
+        <h2 className="text-3xl font-bold text-white mb-4">Our Mission</h2>
+        <p className="text-gray-300 leading-relaxed">
+          To empower businesses through innovative digital solutions that drive growth and create lasting value. We combine technical excellence with deep industry knowledge to deliver transformative results.
+        </p>
+      </div>
+      <div className="bg-black p-8 rounded-xl shadow-sm border border-gray-800">
+        <h2 className="text-3xl font-bold text-primary-300 mb-4">Our Vision</h2>
+        <p className="text-gray-300 leading-relaxed">
+          To be the global leader in digital innovation, shaping a future where technology elevates human potential and creates sustainable value for all stakeholders.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
       {/* Our Story Section */}
       <section className="py-20 bg-white">
         <div className="container mx-auto px-4">
