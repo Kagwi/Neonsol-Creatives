@@ -10,7 +10,7 @@ function AboutPage() {
   const [satisfaction, setSatisfaction] = useState(0);
 
   useEffect(() => {
-    const duration = 3000; // Total animation duration in ms
+    const duration = 5000; // Total animation duration in ms
     const increments = {
       years: 10,
       projects: 200,
