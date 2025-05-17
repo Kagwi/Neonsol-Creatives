@@ -78,17 +78,16 @@ function HomePage() {
 </section>
 
 {/* Services Section */}
- {/* Services Section */}
-<section className="py-24 bg-secondary-50">
+<section className="py-24 bg-secondary-900">
   <div className="container mx-auto px-4">
     <div className="max-w-3xl mx-auto text-center mb-16">
-      <span className="inline-block px-3 py-1 bg-primary-50 text-primary-600 rounded-full text-sm font-medium mb-4">
+      <span className="inline-block px-3 py-1 bg-orange-500/20 text-orange-400 rounded-full text-sm font-medium mb-4">
         Our Services
       </span>
-      <h2 className="text-3xl sm:text-4xl font-bold text-secondary-900 mb-6">
+      <h2 className="text-3xl sm:text-4xl font-bold text-white mb-6">
         Transformative Technology Solutions
       </h2>
-      <p className="text-secondary-600 text-lg leading-relaxed">
+      <p className="text-gray-400 text-lg leading-relaxed">
         We offer a comprehensive range of services designed to help your business innovate, grow, and stay ahead of the competition.
       </p>
     </div>
@@ -122,13 +121,14 @@ function HomePage() {
       ].map((service, index) => (
         <div 
           key={index}
-          className="bg-white p-6 rounded-xl shadow-sm border border-secondary-100 
-                    transition-all hover:shadow-medium hover:-translate-y-1 hover:border-primary-300"
+          className="bg-black p-6 rounded-xl border-2 border-gray-800 transition-all 
+                    duration-300 hover:border-orange-500 hover:shadow-[0_0_25px_rgba(255,165,0,0.2)]
+                    group cursor-default"
         >
-          <h3 className="text-xl font-semibold text-secondary-900 mb-3">
+          <h3 className="text-xl font-semibold text-white mb-3 group-hover:text-orange-400 transition-colors">
             {service.title}
           </h3>
-          <p className="text-secondary-600 text-sm leading-relaxed">
+          <p className="text-gray-400 text-sm leading-relaxed group-hover:text-gray-200 transition-colors">
             {service.description}
           </p>
         </div>
@@ -136,13 +136,14 @@ function HomePage() {
     </div>
 
     <div className="text-center mt-16">
-      <Button to="/services" variant="primary" size="lg" className="group">
+      <Button to="/services" variant="primary" size="lg" className="group bg-orange-500 hover:bg-orange-600">
         View All Services
         <ArrowRight size={16} className="ml-2 group-hover:translate-x-1 transition-transform duration-300" />
       </Button>
     </div>
   </div>
-</section>      
+</section>
+      
 {/*About Us Section*/}
 <section className="py-24 bg-white">
   <div className="container mx-auto px-4">
