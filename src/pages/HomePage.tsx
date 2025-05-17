@@ -134,10 +134,12 @@ function HomePage() {
           Pioneering Excellence in Tech Innovation
         </h2>
         <p className="text-secondary-600 mb-6 leading-relaxed animate-fade-in-up">
-          Neonsol Creatives transforms ideas into impactful digital solutions...
+          Neonsol Creatives transforms ideas into impactful digital solutions by 
+          blending innovative design, strategic thinking, and cutting-edge technology to help brands thrive in the digital age.
         </p>
         <p className="text-secondary-600 mb-8 leading-relaxed animate-fade-in-up">
-          Whether you're looking to gain insights from complex datasets...
+          Whether you're looking to gain insights from complex datasets, craft compelling digital experiences, or build scalable web solutions, 
+          Neonsol Creatives delivers tailored strategies that drive measurable results.
         </p>
 
         <div className="grid grid-cols-2 gap-6 mb-8">
