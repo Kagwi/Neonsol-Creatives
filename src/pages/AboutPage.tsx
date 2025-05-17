@@ -63,26 +63,64 @@ function AboutPage() {
         </div>
       </section>
 
-      {/* Mission and Vision Section */}
-       <section className="py-20 bg-black">
+      {/*Mission and Vision Section*/}
+        <section className="py-20 bg-black">
+  <style>{`
+    @keyframes border-glow {
+      0% { box-shadow: 0 0 0 0 rgba(255, 165, 0, 0.7); }
+      100% { box-shadow: 0 0 10px 5px rgba(255, 165, 0, 0); }
+    }
+    @keyframes slideInLeft {
+      from { transform: translateX(-50px); opacity: 0; }
+      to { transform: translateX(0); opacity: 1; }
+    }
+    @keyframes slideInRight {
+      from { transform: translateX(50px); opacity: 0; }
+      to { transform: translateX(0); opacity: 1; }
+    }
+  `}</style>
+  
   <div className="container mx-auto px-4 max-w-6xl">
     <div className="grid md:grid-cols-2 gap-12">
-      <div className="bg-black p-8 rounded-xl shadow-sm border border-gray-800">
-        <h2 className="text-3xl font-bold text-white mb-4">Our Mission</h2>
+      <div 
+        className="p-8 rounded-xl border-2 border-orange-500 animate-border-glow"
+        style={{
+          animation: 'slideInLeft 0.8s ease-out',
+          background: 'rgba(0, 0, 0, 0.7)',
+          boxShadow: '0 4px 30px rgba(0, 0, 0, 0.1)',
+          backdropFilter: 'blur(5px)'
+        }}
+      >
+        <h2 className="text-3xl font-bold text-orange-400 mb-4">
+          Our Mission
+        </h2>
         <p className="text-gray-300 leading-relaxed">
-          To empower businesses through innovative digital solutions that drive growth and create lasting value. We combine technical excellence with deep industry knowledge to deliver transformative results.
+          To empower businesses through innovative digital solutions that drive growth and create lasting value. 
+          We combine technical excellence with deep industry knowledge to deliver transformative results.
         </p>
       </div>
-      <div className="bg-black p-8 rounded-xl shadow-sm border border-gray-800">
-        <h2 className="text-3xl font-bold text-primary-300 mb-4">Our Vision</h2>
+
+      <div 
+        className="p-8 rounded-xl border-2 border-orange-500 animate-border-glow"
+        style={{
+          animation: 'slideInRight 0.8s ease-out',
+          background: 'rgba(0, 0, 0, 0.7)',
+          boxShadow: '0 4px 30px rgba(0, 0, 0, 0.1)',
+          backdropFilter: 'blur(5px)'
+        }}
+      >
+        <h2 className="text-3xl font-bold text-orange-400 mb-4">
+          Our Vision
+        </h2>
         <p className="text-gray-300 leading-relaxed">
-          To be the global leader in digital innovation, shaping a future where technology elevates human potential and creates sustainable value for all stakeholders.
+          To be the global leader in digital innovation, shaping a future where technology elevates human potential 
+          and creates sustainable value for all stakeholders.
         </p>
       </div>
     </div>
   </div>
 </section>
-      {/* Our Story Section */}
+            {/* Our Story Section */}
       <section className="py-20 bg-white">
         <div className="container mx-auto px-4">
           <div className="flex flex-col lg:flex-row items-center">
@@ -122,7 +160,6 @@ function AboutPage() {
       </section>
 
       {/* Values Section */}
-        {/* Values Section */}
       <section className="py-20 bg-secondary-50">
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto text-center mb-16">
