@@ -194,7 +194,6 @@ function HomePage() {
         size="lg" 
         className="group bg-gradient-to-r from-orange-500 to-amber-600 hover:from-amber-600 hover:to-orange-500 transition-all"
       >
-        <span className="inline-block mr-2">🚀</span>
         Explore All Services
         <ArrowRight size={20} className="ml-3 group-hover:translate-x-2 transition-transform duration-300" />
       </Button>
