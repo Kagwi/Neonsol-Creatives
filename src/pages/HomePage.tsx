@@ -128,15 +128,14 @@ function HomePage() {
               <span className="inline-block px-3 py-1 bg-primary-50 text-primary-600 rounded-full text-sm font-medium mb-4">About Us</span>
               <h2 className="text-3xl sm:text-4xl font-bold text-secondary-900 mb-6">Pioneering Excellence in Tech Innovation</h2>
               <p className="text-secondary-600 mb-6 leading-relaxed">
-                Founded in 2015, Neonsol Creatives has been at the forefront of technology innovation, 
-                delivering cutting-edge solutions to clients across industries. 
-                Our team of experts combines creativity with technical prowess to tackle 
-                complex challenges and drive meaningful results.
-              </p>
+                Neonsol Creatives transforms ideas into impactful digital solutions.
+                We specialize in harnessing the power of data to solve real-world problems—through advanced analytics, machine learning models,
+                and custom web design.               </p>
               <p className="text-secondary-600 mb-8 leading-relaxed">
-                We believe in collaborative partnerships, transparent communication, and 
-                delivering excellence in everything we do. Our client-centered approach ensures 
-                that we understand your unique needs and develop tailored solutions that exceed expectations.
+                Whether you're looking to gain insights from complex datasets, build intelligent applications, or launch a dynamic online presence, 
+                our team brings deep technical expertise and a problem-solving mindset. 
+                At Neonsol, we combine precision, creativity, and strategic thinking to help businesses make smarter decisions, engage users, and grow 
+                with confidence.
               </p>
               <div className="grid grid-cols-2 gap-6 mb-8">
                 <div className="flex items-center space-x-3">
