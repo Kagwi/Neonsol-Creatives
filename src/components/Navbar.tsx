@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Link, NavLink, useNavigate } from 'react-router-dom';
-import { Zap, Menu, X } from 'lucide-react';
+import { Menu, X } from 'lucide-react';
 
 interface NavbarProps {
   scrolled: boolean;
@@ -54,8 +54,7 @@ function Navbar({ scrolled }: NavbarProps) {
     >
       <div className="container mx-auto px-4 flex justify-between items-center">
         <Link to="/" className="flex items-center space-x-2 text-primary-600">
-          <Zap size={28} strokeWidth={2} className="transform -rotate-12" />
-          <span className="text-xl font-bold">Neonsol</span>
+          <span className="text-xl font-bold">Neonsol Creatives | Where Creativity Meets Innovation</span>
         </Link>
 
         <nav className="hidden md:flex items-center space-x-2">
