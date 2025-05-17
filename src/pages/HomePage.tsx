@@ -9,7 +9,6 @@ import { testimonials } from '../data/testimonials';
 
 function HomePage() {
   return (
-    <>
       {/* Hero Section */}
       <section className="relative min-h-screen bg-gradient-to-br from-secondary-950 to-secondary-900 flex items-center">
   <div className="absolute inset-0 overflow-hidden">
