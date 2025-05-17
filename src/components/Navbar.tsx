@@ -59,7 +59,7 @@ function Navbar({ scrolled }: NavbarProps) {
         <Link to="/" className="flex items-center space-x-2 text-primary-600">
           {/* Logo image from /public/assets/logo.png */}
           <img
-            src="/assets/logo.png" // If imported, use: src={logo}
+            src="/main/public/Neonsol%20Logo%20Final.PNG"}
             alt="Neonsol Logo"
             className="h-8 w-auto"
           />
