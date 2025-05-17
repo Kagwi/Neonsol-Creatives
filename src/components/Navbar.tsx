@@ -2,6 +2,9 @@ import React, { useState, useEffect } from 'react';
 import { Link, NavLink, useNavigate } from 'react-router-dom';
 import { Menu, X } from 'lucide-react';
 
+// Optional: Use import if your project supports it
+// import logo from '../assets/logo.png';
+
 interface NavbarProps {
   scrolled: boolean;
 }
@@ -9,7 +12,7 @@ interface NavbarProps {
 function Navbar({ scrolled }: NavbarProps) {
   const [isOpen, setIsOpen] = useState(false);
   const navigate = useNavigate();
-  
+
   useEffect(() => {
     const handleResize = () => {
       if (window.innerWidth >= 768) {
@@ -27,7 +30,7 @@ function Navbar({ scrolled }: NavbarProps) {
     } else {
       document.body.style.overflow = 'auto';
     }
-    
+
     return () => {
       document.body.style.overflow = 'auto';
     };
@@ -40,7 +43,7 @@ function Navbar({ scrolled }: NavbarProps) {
   const toggleMenu = () => setIsOpen(!isOpen);
   const closeMenu = () => setIsOpen(false);
 
-  const navLinkClasses = ({ isActive }: { isActive: boolean }) => 
+  const navLinkClasses = ({ isActive }: { isActive: boolean }) =>
     `px-4 py-2 text-sm font-medium transition-colors duration-200 relative
     ${isActive ? 'text-primary-600' : 'text-secondary-800 hover:text-primary-600'}
     after:content-[''] after:absolute after:h-0.5 after:w-0 after:bottom-0 after:left-0
@@ -48,13 +51,19 @@ function Navbar({ scrolled }: NavbarProps) {
     ${isActive ? 'after:w-full' : 'hover:after:w-full'}`;
 
   return (
-    <header 
+    <header
       className={`fixed w-full z-50 transition-all duration-300 ease-in-out
         ${scrolled ? 'bg-white shadow-soft py-2' : 'bg-transparent py-4'}`}
     >
       <div className="container mx-auto px-4 flex justify-between items-center">
         <Link to="/" className="flex items-center space-x-2 text-primary-600">
-          <span className="text-xl font-bold">Neonsol Creatives | Where Creativity Meets Innovation</span>
+          {/* Logo image from /public/assets/logo.png */}
+          <img
+            src="/assets/logo.png" // If imported, use: src={logo}
+            alt="Neonsol Logo"
+            className="h-8 w-auto"
+          />
+          <span className="text-xl font-bold">Neonsol Creatives</span>
         </Link>
 
         <nav className="hidden md:flex items-center space-x-2">
@@ -63,7 +72,7 @@ function Navbar({ scrolled }: NavbarProps) {
           <NavLink to="/services" className={navLinkClasses}>Services</NavLink>
           <NavLink to="/blog" className={navLinkClasses}>Blog</NavLink>
           <NavLink to="/contact" className={navLinkClasses}>Contact</NavLink>
-          <button 
+          <button
             onClick={handleGetStarted}
             className="ml-4 px-5 py-2 bg-primary-600 text-white rounded-md font-medium text-sm shadow-sm hover:bg-primary-700 transition-colors duration-200"
           >
@@ -71,8 +80,8 @@ function Navbar({ scrolled }: NavbarProps) {
           </button>
         </nav>
 
-        <button 
-          className="md:hidden text-secondary-800 p-2" 
+        <button
+          className="md:hidden text-secondary-800 p-2"
           onClick={toggleMenu}
           aria-label="Toggle menu"
         >
@@ -80,49 +89,49 @@ function Navbar({ scrolled }: NavbarProps) {
         </button>
       </div>
 
-      <div 
+      <div
         className={`fixed inset-0 bg-white z-40 md:hidden transition-transform duration-300 ease-in-out transform ${
           isOpen ? 'translate-y-0' : '-translate-y-full'
         } pt-20 px-6`}
       >
         <nav className="flex flex-col space-y-6">
-          <NavLink 
-            to="/" 
+          <NavLink
+            to="/"
             className={({ isActive }) => `text-xl font-medium ${isActive ? 'text-primary-600' : 'text-secondary-800'}`}
             onClick={closeMenu}
             end
           >
             Home
           </NavLink>
-          <NavLink 
-            to="/about" 
+          <NavLink
+            to="/about"
             className={({ isActive }) => `text-xl font-medium ${isActive ? 'text-primary-600' : 'text-secondary-800'}`}
             onClick={closeMenu}
           >
             About
           </NavLink>
-          <NavLink 
-            to="/services" 
+          <NavLink
+            to="/services"
             className={({ isActive }) => `text-xl font-medium ${isActive ? 'text-primary-600' : 'text-secondary-800'}`}
             onClick={closeMenu}
           >
             Services
           </NavLink>
-          <NavLink 
-            to="/blog" 
+          <NavLink
+            to="/blog"
             className={({ isActive }) => `text-xl font-medium ${isActive ? 'text-primary-600' : 'text-secondary-800'}`}
             onClick={closeMenu}
           >
             Blog
           </NavLink>
-          <NavLink 
-            to="/contact" 
+          <NavLink
+            to="/contact"
             className={({ isActive }) => `text-xl font-medium ${isActive ? 'text-primary-600' : 'text-secondary-800'}`}
             onClick={closeMenu}
           >
             Contact
           </NavLink>
-          <button 
+          <button
             onClick={() => {
               closeMenu();
               handleGetStarted();
