@@ -84,7 +84,7 @@ import Button from '../components/Button';
 
 function AboutPage() {
   // State for count up animation
-  const [years, setYears] = useState(0);
+  var [years, setYears] = useState(0);
   const [projects, setProjects] = useState(0);
   const [team, setTeam] = useState(0);
   const [satisfaction, setSatisfaction] = useState(0);
