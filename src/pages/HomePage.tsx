@@ -200,7 +200,7 @@ function HomePage() {
       <section className="py-24 bg-secondary-50">
         <div className="container mx-auto px-4">
           <div className="bg-white rounded-2xl shadow-medium p-8 md:p-12 lg:p-16 relative overflow-hidden">
-            <div className="absolute right-0 top-0 h-full w-1/3 bg-primary-600 opacity-90 clip-diagonal transform -translate-x-12"></div>
+            <div className="absolute right-0 top-0 h-full w-1/3 bg-primary-600 opacity-60 clip-diagonal transform -translate-x-12"></div>
             <div className="relative z-10 flex flex-col lg:flex-row items-center">
               <div className="lg:w-2/3 mb-10 lg:mb-0">
                 <h2 className="text-3xl sm:text-4xl font-bold text-secondary-900 mb-6">
