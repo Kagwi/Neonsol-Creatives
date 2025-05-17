@@ -33,7 +33,6 @@ const TestimonialCard: React.FC<TestimonialCardProps> = ({
           </p>
         </div>
       </div>
-    </div>
   );
 };
 
