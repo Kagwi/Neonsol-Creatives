@@ -76,49 +76,42 @@ function HomePage() {
     </div>
   </div>
 </section>
-
-{/* Services Section */}
+  {/* Services Section */}
 <section className="py-24 bg-secondary-50">
   <div className="container mx-auto px-4">
-    <div className="max-w-3xl mx-auto text-center mb-16">
+    <div className="max-w-6xl mx-auto text-center mb-20">
       <span className="inline-block px-3 py-1 bg-orange-500/20 text-orange-400 rounded-full text-sm font-medium mb-4">
-        Our Services
+        Why Choose Us
       </span>
-      <h2 className="text-3xl sm:text-4xl font-bold text-white mb-6">
+      <h2 className="text-3xl sm:text-4xl font-bold text-secondary-900 mb-6">
         Transformative Technology Solutions
       </h2>
-      <p className="text-gray-400 text-lg leading-relaxed">
+      <p className="text-secondary-600 text-lg leading-relaxed max-w-3xl mx-auto">
         We offer a comprehensive range of services designed to help your business innovate, grow, and stay ahead of the competition.
       </p>
     </div>
 
-    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
+    {/* Stats Widget */}
+    <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-20 max-w-6xl mx-auto">
       {[
-        {
-          title: 'AI Development',
-          description: 'Build intelligent systems with machine learning and neural networks for predictive analytics and automation'
-        },
-        {
-          title: 'Web Development',
-          description: 'Create responsive, high-performance websites and web applications with modern frameworks'
-        },
-        {
-          title: 'Mobile App Development',
-          description: 'Develop cross-platform mobile applications with native performance and intuitive UX'
-        },
-        {
-          title: 'Data Analysis',
-          description: 'Transform raw data into actionable insights with advanced analytics and visualization'
-        },
-        {
-          title: 'UX/UI Design',
-          description: 'Craft user-centered interfaces that combine aesthetics with exceptional functionality'
-        },
-        {
-          title: 'SEO Optimization',
-          description: 'Boost search rankings and organic traffic through technical and content optimization'
-        }
-      ].map((service, index) => (
+        { value: '10+', label: 'Years Experience' },
+        { value: '98%', label: 'Client Satisfaction' },
+        { value: '200+', label: 'Projects Delivered' }
+      ].map((stat, index) => (
+        <div 
+          key={index}
+          className="bg-black p-8 rounded-xl border-2 border-gray-800 text-center
+                    hover:border-orange-500 transition-colors duration-300"
+        >
+          <div className="text-4xl font-bold text-orange-500 mb-2">{stat.value}</div>
+          <div className="text-gray-300 text-lg">{stat.label}</div>
+        </div>
+      ))}
+    </div>
+
+    {/* Services Grid */}
+    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto mb-20">
+      {services.map((service, index) => (
         <div 
           key={index}
           className="bg-black p-6 rounded-xl border-2 border-gray-800 transition-all 
@@ -135,7 +128,46 @@ function HomePage() {
       ))}
     </div>
 
-    <div className="text-center mt-16">
+    {/* Tech Stack Widget */}
+    <div className="max-w-5xl mx-auto mb-20">
+      <div className="bg-black rounded-xl p-8 border-2 border-gray-800">
+        <h3 className="text-white text-2xl font-semibold mb-6 text-center">
+          Supported Technologies
+        </h3>
+        <div className="grid grid-cols-3 md:grid-cols-6 gap-4">
+          {['React', 'TensorFlow', 'Node.js', 'Python', 'AWS', 'Docker'].map((tech, index) => (
+            <div 
+              key={index}
+              className="p-3 rounded-lg bg-gray-900 hover:bg-orange-500/20 text-center
+                        border border-gray-800 hover:border-orange-500 transition-colors"
+            >
+              <span className="text-gray-300 hover:text-orange-400 font-medium">{tech}</span>
+            </div>
+          ))}
+        </div>
+      </div>
+    </div>
+
+    {/* Client Logos Widget */}
+    <div className="max-w-6xl mx-auto mb-20">
+      <div className="bg-black rounded-xl p-8 border-2 border-gray-800">
+        <h3 className="text-white text-2xl font-semibold mb-8 text-center">
+          Trusted By Industry Leaders
+        </h3>
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-8 opacity-75 hover:opacity-100 transition-opacity">
+          {[...Array(4)].map((_, index) => (
+            <div 
+              key={index}
+              className="flex items-center justify-center grayscale hover:grayscale-0 transition-all"
+            >
+              <div className="h-12 w-32 bg-gray-800 rounded-lg"></div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </div>
+
+    <div className="text-center">
       <Button to="/services" variant="primary" size="lg" className="group bg-orange-500 hover:bg-orange-600">
         View All Services
         <ArrowRight size={16} className="ml-2 group-hover:translate-x-1 transition-transform duration-300" />
