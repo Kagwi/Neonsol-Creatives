@@ -8,6 +8,7 @@ interface ServiceCardProps {
   description: string;
   icon: string;
   delay?: number;
+  link: string;
 }
 
 const ServiceCard: React.FC<ServiceCardProps> = ({ title, description, icon, delay = 0, link }) => {
@@ -22,7 +23,7 @@ const ServiceCard: React.FC<ServiceCardProps> = ({ title, description, icon, del
       <h3 className="text-xl font-semibold mb-3 text-secondary-900">{title}</h3>
       <p className="text-secondary-600 mb-6 leading-relaxed">{description}</p>
       <Link 
-        to={link}
+        to={service.link}
         className="flex items-center text-primary-600 font-medium group-hover:translate-x-1 transition-transform duration-300"
       >
         Learn More <ArrowRight size={16} className="ml-2" />
