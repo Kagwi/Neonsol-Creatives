@@ -78,6 +78,7 @@ function HomePage() {
 </section>
 
 {/* Services Section */}
+ {/* Services Section */}
 <section className="py-24 bg-secondary-50">
   <div className="container mx-auto px-4">
     <div className="max-w-3xl mx-auto text-center mb-16">
@@ -91,24 +92,45 @@ function HomePage() {
         We offer a comprehensive range of services designed to help your business innovate, grow, and stay ahead of the competition.
       </p>
     </div>
-    
-    <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4 max-w-5xl mx-auto">
+
+    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
       {[
-        'AI Development',
-        'Web Development',
-        'Mobile App Development',
-        'Data Analysis',
-        'UX/UI Design',
-        'SEO Optimization'
+        {
+          title: 'AI Development',
+          description: 'Build intelligent systems with machine learning and neural networks for predictive analytics and automation'
+        },
+        {
+          title: 'Web Development',
+          description: 'Create responsive, high-performance websites and web applications with modern frameworks'
+        },
+        {
+          title: 'Mobile App Development',
+          description: 'Develop cross-platform mobile applications with native performance and intuitive UX'
+        },
+        {
+          title: 'Data Analysis',
+          description: 'Transform raw data into actionable insights with advanced analytics and visualization'
+        },
+        {
+          title: 'UX/UI Design',
+          description: 'Craft user-centered interfaces that combine aesthetics with exceptional functionality'
+        },
+        {
+          title: 'SEO Optimization',
+          description: 'Boost search rankings and organic traffic through technical and content optimization'
+        }
       ].map((service, index) => (
         <div 
           key={index}
-          className="bg-white p-4 rounded-lg shadow-sm border border-secondary-100 text-center 
+          className="bg-white p-6 rounded-xl shadow-sm border border-secondary-100 
                     transition-all hover:shadow-medium hover:-translate-y-1 hover:border-primary-300"
         >
-          <span className="text-secondary-800 font-medium text-lg">
-            {service}
-          </span>
+          <h3 className="text-xl font-semibold text-secondary-900 mb-3">
+            {service.title}
+          </h3>
+          <p className="text-secondary-600 text-sm leading-relaxed">
+            {service.description}
+          </p>
         </div>
       ))}
     </div>
@@ -120,8 +142,7 @@ function HomePage() {
       </Button>
     </div>
   </div>
-</section>
-      
+</section>      
 {/*About Us Section*/}
 <section className="py-24 bg-white">
   <div className="container mx-auto px-4">
