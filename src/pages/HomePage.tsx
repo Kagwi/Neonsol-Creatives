@@ -173,30 +173,49 @@ function HomePage() {
   </div>
 </section>
 
-      {/* Testimonials Section */}
-      <section className="py-24 bg-primary-600">
-        <div className="container mx-auto px-4">
-          <div className="max-w-3xl mx-auto text-center mb-16">
-            <span className="inline-block px-3 py-1 bg-white text-primary-600 rounded-full text-sm font-medium mb-4">Testimonials</span>
-            <h2 className="text-3xl sm:text-4xl font-bold text-white mb-6">What Our Clients Say</h2>
-            <p className="text-primary-100 text-lg leading-relaxed">
-              Don't just take our word for it. Here's what our clients have to say about working with Neonsol Creatives.
-            </p>
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {testimonials.map((testimonial) => (
-              <TestimonialCard 
-                key={testimonial.id}
-                name={testimonial.name}
-                role={testimonial.role}
-                company={testimonial.company}
-                quote={testimonial.quote}
-                image={testimonial.image}
-              />
-            ))}
-          </div>
-        </div>
-      </section>
+// Import Swiper components
+import { Swiper, SwiperSlide } from 'swiper/react';
+import 'swiper/css';
+import 'swiper/css/pagination';
+import { Pagination } from 'swiper/modules';
+
+{/* Testimonials Section */}
+<section className="py-24 bg-primary-600">
+  <div className="container mx-auto px-4">
+    <div className="max-w-3xl mx-auto text-center mb-16">
+      <span className="inline-block px-3 py-1 bg-white text-primary-600 rounded-full text-sm font-medium mb-4">Testimonials</span>
+      <h2 className="text-3xl sm:text-4xl font-bold text-white mb-6">What Our Clients Say</h2>
+      <p className="text-primary-100 text-lg leading-relaxed">
+        Don't just take our word for it. Here's what our clients have to say about working with Neonsol Creatives.
+      </p>
+    </div>
+
+    {/* Swiper Slider */}
+    <Swiper
+      modules={[Pagination]}
+      spaceBetween={30}
+      slidesPerView={1}
+      pagination={{ clickable: true }}
+      breakpoints={{
+        768: { slidesPerView: 2 },
+        1024: { slidesPerView: 3 },
+      }}
+    >
+      {testimonials.map((testimonial) => (
+        <SwiperSlide key={testimonial.id}>
+          <TestimonialCard 
+            name={testimonial.name}
+            role={testimonial.role}
+            company={testimonial.company}
+            quote={testimonial.quote}
+            image={testimonial.image}
+          />
+        </SwiperSlide>
+      ))}
+    </Swiper>
+  </div>
+</section>
+
 
       {/* CTA Section */}
       <section className="py-24 bg-secondary-50">
