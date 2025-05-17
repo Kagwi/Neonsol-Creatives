@@ -5,15 +5,13 @@ interface TestimonialCardProps {
   role: string;
   company: string;
   quote: string;
-  image: string;
 }
 
 const TestimonialCard: React.FC<TestimonialCardProps> = ({ 
   name, 
   role, 
   company, 
-  quote, 
-  image 
+  quote,  
 }) => {
   return (
     <div className="bg-white rounded-lg shadow-soft p-8 flex flex-col">
@@ -28,12 +26,6 @@ const TestimonialCard: React.FC<TestimonialCardProps> = ({
         </svg>
         <p className="text-secondary-600 leading-relaxed">{quote}</p>
       </div>
-      <div className="mt-auto flex items-center">
-        <img
-          className="h-12 w-12 rounded-full object-cover"
-          src={image}
-          alt={name}
-        />
         <div className="ml-4">
           <h4 className="text-lg font-semibold text-secondary-900">{name}</h4>
           <p className="text-secondary-600">
