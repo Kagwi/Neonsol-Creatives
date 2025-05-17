@@ -78,7 +78,6 @@ function HomePage() {
 </section>
  
 {/* Services Section */}
- {/* Services Section */}
 <section className="py-24 bg-secondary-50">
   <style jsx>{`
     @keyframes fadeInUp {
@@ -116,7 +115,7 @@ function HomePage() {
         {
           title: 'AI Development',
           description: 'Build intelligent systems with machine learning and neural networks',
-          icon: 'M12 6.042A8.967 8.967 0 006 3.75c-1.052 0-2.062.18-3 .512v14.25A8.987 8.987 0 016 18c2.305 0 4.408.867 6 2.292m0-14.25a8.966 8.966 0 016-2.292c1.052 0 2.062.18 3 .512v14.25A8.987 8.987 0 0018 18a8.967 8.967 0 00-6 2.292m0-14.25v14.25'
+          icon: 'brain-circuit'
         },
         {
           title: 'Web Development',
@@ -141,7 +140,7 @@ function HomePage() {
         {
           title: 'SEO Optimization',
           description: 'Boost search rankings and organic traffic',
-          icon: 'M3 13.125C3 12.504 3.504 12 4.125 12h2.25c.621 0 1.125.504 1.125 1.125v6.75C7.5 20.496 6.996 21 6.375 21h-2.25A1.125 1.125 0 013 19.875v-6.75zM13.5 4.875c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125v14.25c0 .621-.504 1.125-1.125 1.125h-2.25a1.125 1.125 0 01-1.125-1.125V4.875zM22.5 8.625c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125v11.25c0 .621-.504 1.125-1.125 1.125h-2.25a1.125 1.125 0 01-1.125-1.125V8.625z'
+          icon: 'search'
         }
       ].map((service, index) => (
         <div 
