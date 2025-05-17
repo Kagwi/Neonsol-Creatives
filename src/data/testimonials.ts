@@ -7,6 +7,7 @@ export const testimonials: Testimonial[] = [
     "role": "Managing Director",
     "company": "Juja Mabati Factory",
     "quote": "Partnering with Neonsol Creatives transformed how we approach data analysis. Their team helped us streamline data pipelines, improve reporting accuracy, and unlock insights we hadn't accessed before. It’s empowering to work with a Kenyan tech firm that truly understands data-driven decision-making.",
+  },
   {
     id: 2,
     name: "Michael O.",
