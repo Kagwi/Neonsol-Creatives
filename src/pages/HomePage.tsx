@@ -107,78 +107,71 @@ function HomePage() {
         </div>
       </section>
 
-      {/* About Section */}
-      <section className="py-24 bg-white">
-        <div className="container mx-auto px-4">
-          <div className="flex flex-col lg:flex-row lg:items-center">
-            <div className="lg:w-1/2 mb-12 lg:mb-0">
-              <div className="relative">
-                <img
-                  src="https://images.pexels.com/photos/3182812/pexels-photo-3182812.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
-                  alt="Our Team"
-                  className="rounded-xl shadow-medium"
-                />
-                <div className="absolute -bottom-6 -right-6 bg-primary-600 text-white p-6 rounded-lg shadow-md">
-                  <div className="text-4xl font-bold">98%</div>
-                  <div className="text-sm font-medium mt-1">Client Satisfaction Rate</div>
-                </div>
-              </div>
-            </div>
-            <div className="lg:w-1/2 lg:pl-16">
-              <span className="inline-block px-3 py-1 bg-primary-50 text-primary-600 rounded-full text-sm font-medium mb-4">About Us</span>
-              <h2 className="text-3xl sm:text-4xl font-bold text-secondary-900 mb-6">Pioneering Excellence in Tech Innovation</h2>
-              <p className="text-secondary-600 mb-6 leading-relaxed">
-                Neonsol Creatives transforms ideas into impactful digital solutions.
-                We specialize in harnessing the power of data to solve real-world problems—through advanced analytics, machine learning models,
-                and custom web design.               </p>
-              <p className="text-secondary-600 mb-8 leading-relaxed">
-                Whether you're looking to gain insights from complex datasets, build intelligent applications, or launch a dynamic online presence, 
-                our team brings deep technical expertise and a problem-solving mindset. 
-                At Neonsol, we combine precision, creativity, and strategic thinking to help businesses make smarter decisions, engage users, and grow 
-                with confidence.
-              </p>
-              <div className="grid grid-cols-2 gap-6 mb-8">
-                <div className="flex items-center space-x-3">
-                  <div className="h-10 w-10 bg-primary-50 rounded-full flex items-center justify-center">
-                    <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 text-primary-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                    </svg>
-                  </div>
-                  <span className="text-secondary-700 font-medium">Innovative Approach</span>
-                </div>
-                <div className="flex items-center space-x-3">
-                  <div className="h-10 w-10 bg-primary-50 rounded-full flex items-center justify-center">
-                    <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 text-primary-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                    </svg>
-                  </div>
-                  <span className="text-secondary-700 font-medium">Expert Team</span>
-                </div>
-                <div className="flex items-center space-x-3">
-                  <div className="h-10 w-10 bg-primary-50 rounded-full flex items-center justify-center">
-                    <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 text-primary-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                    </svg>
-                  </div>
-                  <span className="text-secondary-700 font-medium">Client-Centered</span>
-                </div>
-                <div className="flex items-center space-x-3">
-                  <div className="h-10 w-10 bg-primary-50 rounded-full flex items-center justify-center">
-                    <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 text-primary-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                    </svg>
-                  </div>
-                  <span className="text-secondary-700 font-medium">Proven Results</span>
-                </div>
-              </div>
-              <Button to="/about" variant="primary" size="lg" className="group">
-                Learn More About Us
-                <ArrowRight size={16} className="ml-2 group-hover:translate-x-1 transition-transform duration-300" />
-              </Button>
-            </div>
+<section className="py-24 bg-white">
+  <div className="container mx-auto px-4">
+    <div className="flex flex-col lg:flex-row lg:items-center">
+      {/* Image Block */}
+      <div className="lg:w-1/2 mb-12 lg:mb-0 animate-fade-in-left">
+        <div className="relative">
+          <img
+            src="https://images.pexels.com/photos/3182812/pexels-photo-3182812.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+            alt="Our Team"
+            className="rounded-xl shadow-medium"
+          />
+          <div className="absolute -bottom-6 -right-6 bg-primary-600 text-white p-6 rounded-lg shadow-md animate-fade-in-up delay-300">
+            <div className="text-4xl font-bold">98%</div>
+            <div className="text-sm font-medium mt-1">Client Satisfaction Rate</div>
           </div>
         </div>
-      </section>
+      </div>
+
+      {/* Text Block */}
+      <div className="lg:w-1/2 lg:pl-16 animate-fade-in-right">
+        <span className="inline-block px-3 py-1 bg-primary-50 text-primary-600 rounded-full text-sm font-medium mb-4 animate-fade-in-up">
+          About Us
+        </span>
+        <h2 className="text-3xl sm:text-4xl font-bold text-secondary-900 mb-6 animate-fade-in-up">
+          Pioneering Excellence in Tech Innovation
+        </h2>
+        <p className="text-secondary-600 mb-6 leading-relaxed animate-fade-in-up">
+          Neonsol Creatives transforms ideas into impactful digital solutions...
+        </p>
+        <p className="text-secondary-600 mb-8 leading-relaxed animate-fade-in-up">
+          Whether you're looking to gain insights from complex datasets...
+        </p>
+
+        <div className="grid grid-cols-2 gap-6 mb-8">
+          {[
+            "Innovative Approach",
+            "Expert Team",
+            "Client-Centered",
+            "Proven Results",
+          ].map((text, index) => (
+            <div
+              key={index}
+              className="flex items-center space-x-3 animate-fade-in-up"
+              style={{ animationDelay: `${0.1 * index}s`, animationFillMode: 'both' }}
+            >
+              <div className="h-10 w-10 bg-primary-50 rounded-full flex items-center justify-center">
+                <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 text-primary-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                </svg>
+              </div>
+              <span className="text-secondary-700 font-medium">{text}</span>
+            </div>
+          ))}
+        </div>
+
+        <div className="animate-fade-in-up delay-300">
+          <Button to="/about" variant="primary" size="lg" className="group">
+            Learn More About Us
+            <ArrowRight size={16} className="ml-2 group-hover:translate-x-1 transition-transform duration-300" />
+          </Button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 
       {/* Testimonials Section */}
       <section className="py-24 bg-primary-600">
