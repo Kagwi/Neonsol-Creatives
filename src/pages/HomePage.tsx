@@ -78,129 +78,39 @@ function HomePage() {
 </section>
  
 {/* Services Section */}
-<section className="py-24 bg-secondary-50">
-  <style jsx>{`
-    @keyframes fadeInUp {
-      from {
-        opacity: 0;
-        transform: translateY(20px);
-      }
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
-    }
-    @keyframes pulseOrange {
-      0% { box-shadow: 0 0 0 0 rgba(255,165,0,0.4); }
-      70% { box-shadow: 0 0 0 15px rgba(255,165,0,0); }
-      100% { box-shadow: 0 0 0 0 rgba(255,165,0,0); }
-    }
-  `}</style>
-
-  <div className="container mx-auto px-4">
-    <div className="max-w-3xl mx-auto text-center mb-16">
-      <span className="inline-block px-4 py-2 bg-orange-500/20 text-orange-500 rounded-full text-sm font-medium mb-4 animate-pulse">
-        ✨ Our Services
-      </span>
-      <h2 className="text-3xl sm:text-4xl font-bold text-secondary-900 mb-6">
-        Transformative <span className="text-orange-500">Tech</span> Solutions
-      </h2>
-      <p className="text-secondary-600 text-lg leading-relaxed">
-        We offer innovative solutions to propel your business forward
-      </p>
-    </div>
-
-    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
-      {[
-        {
-          title: 'AI Development',
-          description: 'Build intelligent systems with machine learning and neural networks',
-          icon: 'brain-circuit'
-        },
-        {
-          title: 'Web Development',
-          description: 'Create high-performance websites and web applications',
-          icon: 'M17.25 6.75L22.5 12l-5.25 5.25m-10.5 0L1.5 12l5.25-5.25m7.5-3l-4.5 16.5'
-        },
-        {
-          title: 'Mobile Apps',
-          description: 'Cross-platform apps with native performance',
-          icon: 'M10.5 1.5H8.25A2.25 2.25 0 006 3.75v16.5a2.25 2.25 0 002.25 2.25h7.5A2.25 2.25 0 0018 20.25V3.75a2.25 2.25 0 00-2.25-2.25H13.5m-3 0V3h3V1.5m-3 0h3m-3 18.75h3'
-        },
-        {
-          title: 'Data Analysis',
-          description: 'Transform data into actionable insights',
-          icon: 'M3 13.125C3 12.504 3.504 12 4.125 12h2.25c.621 0 1.125.504 1.125 1.125v6.75C7.5 20.496 6.996 21 6.375 21h-2.25A1.125 1.125 0 013 19.875v-6.75zM9.75 8.625c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125v11.25c0 .621-.504 1.125-1.125 1.125h-2.25a1.125 1.125 0 01-1.125-1.125V8.625zM16.5 4.125c0-.621.504-1.125 1.125-1.125h2.25C20.496 3 21 3.504 21 4.125v15.75c0 .621-.504 1.125-1.125 1.125h-2.25a1.125 1.125 0 01-1.125-1.125V4.125z'
-        },
-        {
-          title: 'UX/UI Design',
-          description: 'User-centered interfaces with perfect aesthetics',
-          icon: 'M9 4.5v15m6-15v15m-10.875 0h15.75c.621 0 1.125-.504 1.125-1.125V5.625c0-.621-.504-1.125-1.125-1.125H4.125C3.504 4.5 3 5.004 3 5.625v12.75c0 .621.504 1.125 1.125 1.125z'
-        },
-        {
-          title: 'SEO Optimization',
-          description: 'Boost search rankings and organic traffic',
-          icon: 'search'
-        }
-      ].map((service, index) => (
-        <div 
-          key={index}
-          className="relative bg-black p-8 rounded-2xl border-2 border-orange-500/30 transition-all 
-                    duration-500 hover:border-orange-500 hover:shadow-[0_0_40px_rgba(255,165,0,0.3)]
-                    group cursor-default overflow-hidden animate-fadeInUp"
-          style={{
-            animationDelay: `${index * 100}ms`,
-            animationFillMode: 'both',
-            animationDuration: '800ms'
-          }}
-        >
-          {/* Animated Background */}
-          <div className="absolute inset-0 bg-gradient-to-br from-orange-500/5 to-transparent" />
-          
-          {/* Pulsing Effect */}
-          <div className="absolute inset-0 animate-pulseOrange opacity-30" />
-
-          <div className="relative z-10">
-            <div className="flex items-center space-x-4 mb-5">
-              <div className="p-3 bg-orange-500/20 rounded-xl group-hover:bg-orange-500/30 transition-colors">
-                <svg 
-                  xmlns="http://www.w3.org/2000/svg" 
-                  fill="none" 
-                  viewBox="0 0 24 24" 
-                  strokeWidth="1.5" 
-                  stroke="currentColor" 
-                  className="w-8 h-8 text-orange-400 group-hover:text-orange-300 transition-all"
-                >
-                  <path strokeLinecap="round" strokeLinejoin="round" d={service.icon} />
-                </svg>
-              </div>
-              <h3 className="text-2xl font-bold text-orange-500 group-hover:text-orange-400 transition-colors">
-                {service.title}
-              </h3>
-            </div>
-            <p className="text-gray-300 text-md leading-relaxed group-hover:text-gray-100 transition-colors">
-              {service.description}
-            </p>
-          </div>
-        </div>
-      ))}
-    </div>
-
-    {/* Animated CTA Button */}
-    <div className="text-center mt-16 animate-bounce-in">
-      <Button 
-        to="/services" 
-        variant="primary" 
-        size="lg" 
-        className="group bg-gradient-to-r from-orange-500 to-amber-600 hover:from-amber-600 hover:to-orange-500 transition-all"
-      >
-        <span className="inline-block mr-2">🚀</span>
-        Explore All Services
-        <ArrowRight size={20} className="ml-3 group-hover:translate-x-2 transition-transform duration-300" />
-      </Button>
-    </div>
-  </div>
-</section>      
+  {[
+  {
+    title: 'AI Development',
+    description: 'Build intelligent systems with machine learning and neural networks',
+    icon: 'M4 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2V6zM14 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V6zM4 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2v-2zM14 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2zM8 8h8m-8 4h8m-4 4h4'
+  },
+  {
+    title: 'Web Development',
+    description: 'Create high-performance websites and web applications',
+    icon: 'M17.25 6.75L22.5 12l-5.25 5.25m-10.5 0L1.5 12l5.25-5.25m7.5-3l-4.5 16.5'
+  },
+  {
+    title: 'Mobile Apps',
+    description: 'Cross-platform apps with native performance',
+    icon: 'M10.5 1.5H8.25A2.25 2.25 0 006 3.75v16.5a2.25 2.25 0 002.25 2.25h7.5A2.25 2.25 0 0018 20.25V3.75a2.25 2.25 0 00-2.25-2.25H13.5m-3 0V3h3V1.5m-3 0h3m-3 18.75h3'
+  },
+  {
+    title: 'Data Analysis',
+    description: 'Transform data into actionable insights',
+    icon: 'M3 13.125C3 12.504 3.504 12 4.125 12h2.25c.621 0 1.125.504 1.125 1.125v6.75C7.5 20.496 6.996 21 6.375 21h-2.25A1.125 1.125 0 013 19.875v-6.75zM9.75 8.625c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125v11.25c0 .621-.504 1.125-1.125 1.125h-2.25a1.125 1.125 0 01-1.125-1.125V8.625zM16.5 4.125c0-.621.504-1.125 1.125-1.125h2.25C20.496 3 21 3.504 21 4.125v15.75c0 .621-.504 1.125-1.125 1.125h-2.25a1.125 1.125 0 01-1.125-1.125V4.125z'
+  },
+  {
+    title: 'UX/UI Design',
+    description: 'User-centered interfaces with perfect aesthetics',
+    icon: 'M9 4.5v15m6-15v15m-10.875 0h15.75c.621 0 1.125-.504 1.125-1.125V5.625c0-.621-.504-1.125-1.125-1.125H4.125C3.504 4.5 3 5.004 3 5.625v12.75c0 .621.504 1.125 1.125 1.125z'
+  },
+  {
+    title: 'SEO Optimization',
+    description: 'Boost search rankings and organic traffic',
+    icon: 'M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v3m0 0v3m0-3h3m-3 0H7'
+  }
+].map((service, index) => (
+  // ... rest of the component code
 {/*About Us Section*/}
 <section className="py-24 bg-white">
   <div className="container mx-auto px-4">
