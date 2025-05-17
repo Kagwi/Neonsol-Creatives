@@ -78,7 +78,6 @@ function HomePage() {
 </section>
  
 {/* Services Section */}
-{/* Services Section */}
 <section className="py-24 bg-secondary-50">
   <style jsx>{`
     @keyframes fadeInUp {
@@ -101,7 +100,7 @@ function HomePage() {
   <div className="container mx-auto px-4">
     <div className="max-w-3xl mx-auto text-center mb-16">
       <span className="inline-block px-4 py-2 bg-orange-500/20 text-orange-500 rounded-full text-sm font-medium mb-4 animate-pulse">
-        ✨ Our Services
+         Our Services
       </span>
       <h2 className="text-3xl sm:text-4xl font-bold text-secondary-900 mb-6">
         Transformative <span className="text-orange-500">Tech</span> Solutions
@@ -141,7 +140,7 @@ function HomePage() {
         {
           title: 'SEO Optimization',
           description: 'Boost search rankings and organic traffic',
-          icon: 'M3 13.125C3 12.504 3.504 12 4.125 12h2.25c.621 0 1.125.504 1.125 1.125v6.75C7.5 20.496 6.996 21 6.375 21h-2.25A1.125 1.125 0 013 19.875v-6.75zM13.5 4.875c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125v14.25c0 .621-.504 1.125-1.125 1.125h-2.25a1.125 1.125 0 01-1.125-1.125V4.875zM22.5 8.625c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125v11.25c0 .621-.504 1.125-1.125 1.125h-2.25a1.125 1.125 0 01-1.125-1.125V8.625z'
+          icon: 'M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v3m0 0v3m0-3h3m-3 0H7'
         }
       ].map((service, index) => (
         <div 
