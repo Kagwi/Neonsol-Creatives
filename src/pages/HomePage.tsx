@@ -172,12 +172,6 @@ function HomePage() {
   </div>
 </section>
 
-// Import Swiper components
-import { Swiper, SwiperSlide } from 'swiper/react';
-import 'swiper/css';
-import 'swiper/css/pagination';
-import { Pagination } from 'swiper/modules';
-
 {/* Testimonials Section */}
       <section className="py-24 bg-primary-600">
         <div className="container mx-auto px-4">
