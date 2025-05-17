@@ -78,7 +78,7 @@ function HomePage() {
 </section>
 
 {/* Services Section */}
-<section className="py-24 bg-secondary-900">
+<section className="py-24 bg-secondary-50">
   <div className="container mx-auto px-4">
     <div className="max-w-3xl mx-auto text-center mb-16">
       <span className="inline-block px-3 py-1 bg-orange-500/20 text-orange-400 rounded-full text-sm font-medium mb-4">
