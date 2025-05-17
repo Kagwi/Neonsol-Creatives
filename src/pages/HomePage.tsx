@@ -114,7 +114,7 @@ function HomePage() {
       <div className="lg:w-1/2 mb-12 lg:mb-0 animate-fade-in-left">
         <div className="relative">
           <img
-            src="https://images.pexels.com/photos/3182812/pexels-photo-3182812.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+            src="https://images.pexels.com/photos/19805876/pexels-photo-19805876/free-photo-of-man-working-on-computer-in-an-office.jpeg?auto=compress&cs=tinysrgb&w=600"
             alt="Our Team"
             className="rounded-xl shadow-medium"
           />
