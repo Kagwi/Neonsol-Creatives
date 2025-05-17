@@ -77,36 +77,52 @@ function HomePage() {
   </div>
 </section>
 
-      {/* Services Section */}
-      <section className="py-24 bg-secondary-50">
-        <div className="container mx-auto px-4">
-          <div className="max-w-3xl mx-auto text-center mb-16">
-            <span className="inline-block px-3 py-1 bg-primary-50 text-primary-600 rounded-full text-sm font-medium mb-4">Our Services</span>
-            <h2 className="text-3xl sm:text-4xl font-bold text-secondary-900 mb-6">Transformative Technology Solutions</h2>
-            <p className="text-secondary-600 text-lg leading-relaxed">
-              We offer a comprehensive range of services designed to help your business innovate, grow, and stay ahead of the competition.
-            </p>
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {services.map((service, index) => (
-              <ServiceCard 
-                key={service.id}
-                title={service.title}
-                description={service.description}
-                icon={service.icon}
-                delay={index * 100}
-              />
-            ))}
-          </div>
-          <div className="text-center mt-16">
-            <Button to="/services" variant="primary" size="lg" className="group">
-              View All Services
-              <ArrowRight size={16} className="ml-2 group-hover:translate-x-1 transition-transform duration-300" />
-            </Button>
-          </div>
+{/* Services Section */}
+<section className="py-24 bg-secondary-50">
+  <div className="container mx-auto px-4">
+    <div className="max-w-3xl mx-auto text-center mb-16">
+      <span className="inline-block px-3 py-1 bg-primary-50 text-primary-600 rounded-full text-sm font-medium mb-4">
+        Our Services
+      </span>
+      <h2 className="text-3xl sm:text-4xl font-bold text-secondary-900 mb-6">
+        Transformative Technology Solutions
+      </h2>
+      <p className="text-secondary-600 text-lg leading-relaxed">
+        We offer a comprehensive range of services designed to help your business innovate, grow, and stay ahead of the competition.
+      </p>
+    </div>
+    
+    <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4 max-w-5xl mx-auto">
+      {[
+        'AI Development',
+        'Web Development',
+        'Mobile App Development',
+        'Data Analysis',
+        'UX/UI Design',
+        'SEO Optimization'
+      ].map((service, index) => (
+        <div 
+          key={index}
+          className="bg-white p-4 rounded-lg shadow-sm border border-secondary-100 text-center 
+                    transition-all hover:shadow-medium hover:-translate-y-1 hover:border-primary-300"
+        >
+          <span className="text-secondary-800 font-medium text-lg">
+            {service}
+          </span>
         </div>
-      </section>
+      ))}
+    </div>
 
+    <div className="text-center mt-16">
+      <Button to="/services" variant="primary" size="lg" className="group">
+        View All Services
+        <ArrowRight size={16} className="ml-2 group-hover:translate-x-1 transition-transform duration-300" />
+      </Button>
+    </div>
+  </div>
+</section>
+      
+{/*About Us Section*/}
 <section className="py-24 bg-white">
   <div className="container mx-auto px-4">
     <div className="flex flex-col lg:flex-row lg:items-center">
