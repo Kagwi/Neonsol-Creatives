@@ -8,7 +8,6 @@ interface ServiceCardProps {
   description: string;
   icon: string;
   delay?: number;
-  link: string;
 }
 
 const ServiceCard: React.FC<ServiceCardProps> = ({ title, description, icon, delay = 0, link }) => {
