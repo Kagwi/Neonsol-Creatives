@@ -40,32 +40,32 @@ function AboutPage() {
 
   return (
     <>
-      {/* Hero Section with background image */}
-        <section
-  className="pt-32 pb-20 text-white bg-cover bg-center relative"
-  style={{
+  {/* Hero Section with background image */}
+     <section 
+  className="pt-32 pb-20 bg-secondary-950 bg-blend-overlay bg-cover bg-center text-white"
+  style={{ 
     backgroundImage: 'url("https://raw.githubusercontent.com/Kagwi/Neonsol-Creatives/refs/heads/main/public/pexels-david-geib-1265112-3220850.jpg")',
     backgroundPosition: 'center center',
-    backgroundAttachment: 'fixed'
+    backgroundAttachment: 'fixed',
   }}
 >
-  <div className="absolute inset-0 bg-black bg-opacity-60"></div>
-  <div className="relative z-10 px-4 ml-auto text-left w-full max-w-6xl">
-    <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold mb-6 animate-slide-up">
-      Learn More <span className="text-primary-600">About Us</span>
-    </h1>
-    <p
-      className="text-secondary-200 text-xl mb-8 animate-slide-up"
-      style={{ animationDelay: '200ms' }}
-    >
-      Understand what Neonsol Creatives is made of.
-    </p>
+  <div className="container mx-auto px-4">
+    <div className="max-w-3xl">
+      <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold mb-6 animate-slide-up">
+        Learn More <span className="text-primary-600">About Us</span>
+      </h1>
+      <p 
+        className="text-secondary-200 text-xl mb-8 animate-slide-up" 
+        style={{ animationDelay: '200ms' }}
+      >
+        Understand what Neonsol Creatives stands for. 
+      </p>
+    </div>
   </div>
-</section>
-
+</section> 
       
-      {/*Mission and Vision Section*/}
-        <section className="py-20 bg-black">
+  {/*Mission and Vision Section*/}
+  <section className="py-20 bg-black">
   <style>{`
     @keyframes border-glow {
       0% { box-shadow: 0 0 0 0 rgba(255, 165, 0, 0.7); }
