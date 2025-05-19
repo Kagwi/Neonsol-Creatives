@@ -139,20 +139,15 @@ function AboutPage() {
                 A Journey of Innovation and Excellence
               </h2>
               <p className="text-secondary-600 mb-6 leading-relaxed">
-                Founded in 2015 by Sandra Chen, Neonsol Creatives began with a simple yet ambitious vision: to
-                bridge the gap between cutting-edge technology and creative problem-solving. What started as a
-                small team working out of a co-working space has grown into a thriving company with a global
-                presence and a diverse portfolio of clients.
+                Neonsol Creatives is a solution-focused technology company specializing in AI, web development, machine learning, and data analysis. 
+                Built around a culture of innovation and practical problem-solving, we create tools and platforms designed to address real-world challenges. 
               </p>
               <p className="text-secondary-600 mb-6 leading-relaxed">
-                Over the years, we've remained true to our founding principles: innovation, quality, and
-                client satisfaction. Our team has expanded to include some of the brightest minds in the
-                industry, all united by a passion for creating technology solutions that make a difference.
+                 Our team combines technical expertise with a deep understanding of user needs to deliver reliable, effective solutions. 
               </p>
               <p className="text-secondary-600 mb-8 leading-relaxed">
-                Today, Neonsol Creatives stands as a leader in the tech industry, known for our forward-thinking
-                approach and commitment to excellence. We continue to push boundaries, explore new possibilities,
-                and help our clients navigate the ever-evolving digital landscape.
+                Whether developing intelligent systems or optimizing digital workflows, we approach every project with a focus on clarity, functionality, 
+                and long-term value. At Neonsol Creatives, we don’t just build technology—we build solutions that work.
               </p>
             </div>
           </div>
