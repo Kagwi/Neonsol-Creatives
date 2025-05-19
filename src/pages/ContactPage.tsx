@@ -5,20 +5,29 @@ import ContactForm from '../components/ContactForm';
 function ContactPage() {
   return (
     <>
-      {/* Hero Section */}
-      <section className="pt-32 pb-20 bg-gradient-to-br from-secondary-950 to-secondary-900 text-white">
-        <div className="container mx-auto px-4">
-          <div className="max-w-3xl">
-            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold mb-6 animate-slide-up">
-              Get in <span className="text-primary-600">Touch</span>
-            </h1>
-            <p className="text-secondary-200 text-xl mb-8 animate-slide-up" style={{ animationDelay: '200ms' }}>
-              Have a question or want to work with us? We'd love to hear from you.
-            </p>
-          </div>
-        </div>
-      </section>
-
+{/* Hero Section */}
+<section 
+  className="pt-32 pb-20 bg-secondary-950 bg-blend-overlay bg-cover bg-center text-white"
+  style={{ 
+    backgroundImage: 'url("https://raw.githubusercontent.com/Kagwi/Neonsol-Creatives/refs/heads/main/public/pexels-david-geib-1265112-3220850.jpg")',
+    backgroundPosition: 'center center',
+    backgroundAttachment: 'fixed',
+  }}
+>
+  <div className="container mx-auto px-4">
+    <div className="max-w-3xl">
+      <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold mb-6 animate-slide-up">
+        Get in <span className="text-primary-600">Touch</span>
+      </h1>
+      <p 
+        className="text-secondary-200 text-xl mb-8 animate-slide-up" 
+        style={{ animationDelay: '200ms' }}
+      >
+        Have a question or want to work with us? We'd love to hear from you.
+      </p>
+    </div>
+  </div>
+</section>
       {/* Contact Info & Form Section */}
       <section className="py-20 bg-white">
         <div className="container mx-auto px-4">
