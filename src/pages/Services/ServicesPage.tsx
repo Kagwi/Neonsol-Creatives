@@ -12,7 +12,7 @@ function ServicesPage() {
    {/* Hero Section */}
   <section
     className="pt-32 pb-20 bg-secondary-950 bg-blend-overlay bg-cover bg-center text-white"
-    style={{ backgroundImage: "url('/public/pexels-david-geib-1265112-3220850.jpg')" }}
+    style={{ backgroundImage: "url('https://github.com/Kagwi/Neonsol-Creatives/blob/main/public/pexels-david-geib-1265112-3220850.jpg')" }}
   >
   <div className="container mx-auto px-4">
     <div className="max-w-3xl">
