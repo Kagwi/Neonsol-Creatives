@@ -9,19 +9,25 @@ function ServicesPage() {
 
   return (
     <>
-      {/* Hero Section */}
-      <section className="pt-32 pb-20 bg-gradient-to-br from-secondary-950 to-secondary-900 text-white">
-        <div className="container mx-auto px-4">
-          <div className="max-w-3xl">
-            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold mb-6 animate-slide-up">
-              Our <span className="text-primary-600">Services</span>
-            </h1>
-            <p className="text-secondary-200 text-xl mb-8 animate-slide-up" style={{ animationDelay: '200ms' }}>
-              Comprehensive technology solutions designed to drive innovation and growth for your business.
-            </p>
-          </div>
-        </div>
-      </section>
+   {/* Hero Section */}
+  <section
+    className="pt-32 pb-20 bg-secondary-950 bg-blend-overlay bg-cover bg-center text-white"
+    style={{ backgroundImage: "url('/images/services-hero.jpg')" }}
+  >
+  <div className="container mx-auto px-4">
+    <div className="max-w-3xl">
+      <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold mb-6 animate-slide-up">
+        Our <span className="text-primary-600">Services</span>
+      </h1>
+        <p
+        className="text-secondary-200 text-xl mb-8 animate-slide-up"
+        style={{ animationDelay: '200ms' }}
+        >
+          Comprehensive technology solutions designed to drive innovation and growth for your business.
+        </p>
+      </div>
+    </div>
+  </section>
 
       {/* Main Services Section */}
       <section className="py-20 bg-white">
