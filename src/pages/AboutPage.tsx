@@ -126,10 +126,11 @@ function AboutPage() {
           <div className="flex flex-col lg:flex-row items-center">
             <div className="lg:w-1/2 mb-12 lg:mb-0">
               <img
-                src= "https://github.com/Kagwi/Neonsol-Creatives/blob/main/public/Neonsol%20Creatives%20Image.webp"
-                alt="Neonsol Creatives Office"
-                className="rounded-lg shadow-medium"
+              src="https://raw.githubusercontent.com/Kagwi/Neonsol-Creatives/main/public/Neonsol%20Creatives%20Image.webp"
+              alt="Neonsol Creatives Office"
+              className="rounded-lg shadow-medium"
               />
+
             </div>
             <div className="lg:w-1/2 lg:pl-16">
               <span className="inline-block px-3 py-1 bg-primary-50 text-primary-600 rounded-full text-sm font-medium mb-4">
