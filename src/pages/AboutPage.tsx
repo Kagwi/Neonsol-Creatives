@@ -126,7 +126,7 @@ function AboutPage() {
           <div className="flex flex-col lg:flex-row items-center">
             <div className="lg:w-1/2 mb-12 lg:mb-0">
               <img
-                src="https://images.pexels.com/photos/3184292/pexels-photo-3184292.jpeg"
+                src= "https://github.com/Kagwi/Neonsol-Creatives/blob/main/public/Neonsol%20Creatives%20Image.webp"
                 alt="Neonsol Creatives Office"
                 className="rounded-lg shadow-medium"
               />
