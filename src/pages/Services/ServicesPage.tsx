@@ -16,7 +16,8 @@ function ServicesPage() {
          backgroundImage: 'url("https://raw.githubusercontent.com/Kagwi/Neonsol-Creatives/refs/heads/main/public/pexels-david-geib-1265112-3220850.jpg")',
          backgroundPosition: 'center center',
          backgroundAttachment: 'fixed',
-         }}    
+         }}
+  >  
   <div className="container mx-auto px-4">
     <div className="max-w-3xl">
       <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold mb-6 animate-slide-up">
