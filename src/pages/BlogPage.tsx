@@ -7,15 +7,15 @@ function BlogPage() {
   const [searchTerm, setSearchTerm] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('All');
 
-  // Extract unique categories from blog posts
   const categories = ['All', ...Array.from(new Set(blogPosts.map(post => post.category)))];
 
-  // Filter blog posts based on search term and selected category
   const filteredPosts = blogPosts.filter(post => {
-    const matchesSearch = post.title.toLowerCase().includes(searchTerm.toLowerCase()) || 
-                          post.excerpt.toLowerCase().includes(searchTerm.toLowerCase());
+    const matchesSearch =
+      post.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
+      post.excerpt.toLowerCase().includes(searchTerm.toLowerCase());
+
     const matchesCategory = selectedCategory === 'All' || post.category === selectedCategory;
-    
+
     return matchesSearch && matchesCategory;
   });
 
@@ -25,9 +25,10 @@ function BlogPage() {
       <section
         className="pt-32 pb-20 text-white bg-cover bg-center relative"
         style={{
-          backgroundImage: 'url("https://raw.githubusercontent.com/Kagwi/Neonsol-Creatives/main/public/pexels-david-geib-1265112-3220850.jpg")',
+          backgroundImage:
+            'url("https://raw.githubusercontent.com/Kagwi/Neonsol-Creatives/main/public/pexels-david-geib-1265112-3220850.jpg")',
           backgroundPosition: 'center center',
-          backgroundAttachment: 'fixed'
+          backgroundAttachment: 'fixed',
         }}
       >
         <div className="absolute inset-0 bg-black bg-opacity-60"></div>
@@ -57,7 +58,10 @@ function BlogPage() {
                 onChange={(e) => setSearchTerm(e.target.value)}
                 className="w-full px-4 py-3 pl-10 bg-white border border-secondary-200 rounded-md focus:ring-2 focus:ring-primary-500 focus:border-primary-500 outline-none"
               />
-              <Search size={18} className="absolute left-3 top-1/2 transform -translate-y-1/2 text-secondary-400" />
+              <Search
+                size={18}
+                className="absolute left-3 top-1/2 transform -translate-y-1/2 text-secondary-400"
+              />
             </div>
             <div className="flex space-x-2 overflow-x-auto pb-2 w-full md:w-auto">
               {categories.map((category, index) => (
@@ -80,7 +84,7 @@ function BlogPage() {
           {filteredPosts.length > 0 ? (
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {filteredPosts.map((post) => (
-                <BlogCard 
+                <BlogCard
                   key={post.id}
                   id={post.id}
                   title={post.title}
