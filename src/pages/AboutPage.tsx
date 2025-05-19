@@ -50,7 +50,7 @@ function AboutPage() {
   }}
 >
   <div className="absolute inset-0 bg-black bg-opacity-60"></div>
-  <div className="relative z-10 px-4 ml-auto text-right w-full max-w-6xl">
+  <div className="relative z-10 px-4 ml-auto text-left w-full max-w-6xl">
     <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold mb-6 animate-slide-up">
       Learn More <span className="text-primary-600">About Us</span>
     </h1>
