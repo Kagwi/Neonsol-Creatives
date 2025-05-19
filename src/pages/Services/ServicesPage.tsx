@@ -28,8 +28,8 @@ function ServicesPage() {
         >
           Comprehensive technology solutions designed to drive innovation and growth for your business.
         </p>
-      </div>
     </div>
+  </div>
   </section>
 
       {/* Main Services Section */}
