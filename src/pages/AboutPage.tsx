@@ -50,7 +50,7 @@ function AboutPage() {
   }}
 >
   <div className="absolute inset-0 bg-black bg-opacity-60"></div>
-  <div className="container mx-auto px-4 relative z-10 max-w-3xl ml-auto text-left">
+  <div className="relative z-10 px-4 ml-auto text-right w-full max-w-6xl">
     <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold mb-6 animate-slide-up">
       Learn More <span className="text-primary-600">About Us</span>
     </h1>
@@ -63,7 +63,7 @@ function AboutPage() {
   </div>
 </section>
 
-
+      
       {/*Mission and Vision Section*/}
         <section className="py-20 bg-black">
   <style>{`
