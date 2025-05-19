@@ -44,7 +44,7 @@ function AboutPage() {
       <section
         className="pt-32 pb-20 text-white bg-cover bg-center relative"
         style={{
-          backgroundImage: "url('https://images.pexels.com/photos/3184292/pexels-photo-3184292.jpeg')",
+          backgroundImage: "https://images.pexels.com/photos/3220850/pexels-photo-3220850.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2')",
           backgroundPosition: 'center center',
           backgroundAttachment: 'fixed'
         }}
