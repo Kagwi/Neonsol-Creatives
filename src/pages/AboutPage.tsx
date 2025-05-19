@@ -44,7 +44,7 @@ function AboutPage() {
       <section
         className="pt-32 pb-20 text-white bg-cover bg-center relative"
         style={{
-          backgroundImage: url'("https://raw.githubusercontent.com/Kagwi/Neonsol-Creatives/refs/heads/main/public/pexels-david-geib-1265112-3220850.jpg")',
+          backgroundImage: 'url("https://raw.githubusercontent.com/Kagwi/Neonsol-Creatives/refs/heads/main/public/pexels-david-geib-1265112-3220850.jpg")',
           backgroundPosition: 'center center',
           backgroundAttachment: 'fixed'
         }}
