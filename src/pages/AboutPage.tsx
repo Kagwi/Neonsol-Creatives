@@ -52,13 +52,13 @@ function AboutPage() {
   <div className="absolute inset-0 bg-black bg-opacity-60"></div>
   <div className="container mx-auto px-4 relative z-10 max-w-3xl">
     <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold mb-6 animate-slide-up">
-      Our <span className="text-primary-600">Blog</span>
+      Larn More <span className="text-primary-600">About Us</span>
     </h1>
     <p
       className="text-secondary-200 text-xl mb-8 animate-slide-up"
       style={{ animationDelay: '200ms' }}
     >
-      Insights, trends, and thought leadership from our technology experts.
+      Understand what Neonsol Creatives is made of.
     </p>
   </div>
 </section>
