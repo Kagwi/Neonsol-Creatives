@@ -34,13 +34,13 @@ function BlogPage() {
   <div className="container mx-auto px-4">
     <div className="max-w-3xl">
       <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold mb-6 animate-slide-up">
-        Get in <span className="text-primary-600">Touch</span>
+        Our <span className="text-primary-600">Blog</span>
       </h1>
       <p 
         className="text-secondary-200 text-xl mb-8 animate-slide-up" 
         style={{ animationDelay: '200ms' }}
       >
-        Have a question or want to work with us? We'd love to hear from you.
+        Insights, trends, and thought leadership from our technology experts.
       </p>
     </div>
   </div>
