@@ -33,7 +33,8 @@ const designFeatures = [
 const designProcess = [
   {
     title: "Discovery & Research",
-    description: "We begin by learning about your users and business goals through workshops and research.",
+    description:
+      "We begin by learning about your users and business goals through workshops and research.",
   },
   {
     title: "Wireframing",
@@ -41,11 +42,13 @@ const designProcess = [
   },
   {
     title: "UI Design",
-    description: "We deliver high-fidelity visuals with brand-aligned elements and responsive layouts.",
+    description:
+      "We deliver high-fidelity visuals with brand-aligned elements and responsive layouts.",
   },
   {
     title: "Testing & Handoff",
-    description: "We test designs with users and prepare final files for developers with complete design systems.",
+    description:
+      "We test designs with users and prepare final files for developers with complete design systems.",
   },
 ];
 
@@ -98,17 +101,19 @@ const UiUxDesign = () => (
         >
           We craft seamless experiences and interfaces that keep users engaged and happy.
         </motion.p>
-        <Link
-          to="/contact"
-          className="inline-flex items-center px-6 py-3 bg-orange-500 text-white font-medium rounded-full hover:bg-orange-600 transition-colors duration-300"
+        <button
+          onClick={() => {
+            document.getElementById("features")?.scrollIntoView({ behavior: "smooth" });
+          }}
+          className="inline-flex items-center px-6 py-3 bg-white text-gray-900 font-medium rounded-full hover:bg-gray-200 transition-colors duration-300"
         >
-          Get Started <ArrowRight className="ml-2 w-5 h-5" />
-        </Link>
+          Scroll Down <ArrowRight className="ml-2 w-5 h-5" />
+        </button>
       </div>
     </div>
 
     {/* Features Section */}
-    <section className="py-20 px-6 max-w-6xl mx-auto text-center">
+    <section id="features" className="py-20 px-6 max-w-6xl mx-auto text-center">
       <h2 className="text-3xl font-bold mb-12">What We Offer</h2>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
         {designFeatures.map((feature, idx) => (
