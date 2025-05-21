@@ -8,25 +8,25 @@ const mobileFeatures = [
     title: "iOS & Android Apps",
     description:
       "We build high-performance native apps tailored to each platform’s design and performance standards.",
-    icon: "📱",
+    icon: "\ud83d\udcf1",
   },
   {
     title: "Cross-Platform Development",
     description:
       "Using Flutter or React Native, we create apps that run smoothly on both iOS and Android from a single codebase.",
-    icon: "🔁",
+    icon: "\ud83d\udd01",
   },
   {
     title: "UI/UX Design",
     description:
       "Beautiful, intuitive, and user-friendly interfaces that keep users engaged and satisfied.",
-    icon: "🎨",
+    icon: "\ud83c\udfa8",
   },
   {
     title: "App Store Deployment",
     description:
       "We handle publishing and updating your app on the App Store and Google Play with full compliance.",
-    icon: "🚀",
+    icon: "\ud83d\ude80",
   },
 ];
 
