@@ -53,7 +53,7 @@ const DataAnalysis = () => (
   <div className="bg-white text-gray-900">
     {/* Hero Section */}
     <section
-      className="pt-32 pb-20 bg-secondary-950 bg-blend-overlay bg-cover bg-center text-white"
+      className="relative pt-32 pb-20 bg-secondary-950 bg-blend-overlay bg-cover bg-center text-white"
       style={{
         backgroundImage:
           'url("https://raw.githubusercontent.com/Kagwi/Neonsol-Creatives/refs/heads/main/public/pexels-david-geib-1265112-3220850.jpg")',
@@ -74,10 +74,27 @@ const DataAnalysis = () => (
           </p>
         </div>
       </div>
+
+      {/* Scroll Down Indicator */}
+      <div className="absolute bottom-10 left-1/2 transform -translate-x-1/2 animate-bounce cursor-pointer">
+        <a href="#overview" aria-label="Scroll down">
+          <svg
+            className="w-8 h-8 text-white"
+            fill="none"
+            stroke="currentColor"
+            strokeWidth="2"
+            viewBox="0 0 24 24"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7"></path>
+          </svg>
+        </a>
+      </div>
     </section>
 
     {/* Overview Section */}
     <div
+      id="overview"
       className="w-full bg-cover bg-center bg-no-repeat py-32 text-center text-white"
       style={{ backgroundAttachment: "fixed" }}
     >
@@ -98,12 +115,6 @@ const DataAnalysis = () => (
         >
           Empower your decisions through data visualization, analysis, and predictive intelligence.
         </motion.p>
-        <Link
-          to="/contact"
-          className="inline-flex items-center px-6 py-3 bg-orange-500 text-white font-medium rounded-full hover:bg-orange-600 transition-colors duration-300"
-        >
-          Get Started <ArrowRight className="ml-2 w-5 h-5" />
-        </Link>
       </div>
     </div>
 
