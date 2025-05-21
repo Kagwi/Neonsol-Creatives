@@ -98,12 +98,6 @@ const WebDevelopment = () => (
         >
           Delivering fast, functional, and engaging digital experiences tailored to your business goals.
         </motion.p>
-        <Link
-          to="/contact"
-          className="inline-flex items-center px-6 py-3 bg-orange-500 text-white font-medium rounded-full hover:bg-orange-600 transition-colors duration-300"
-        >
-          Get Started <ArrowRight className="ml-2 w-5 h-5" />
-        </Link>
       </div>
     </div>
 
