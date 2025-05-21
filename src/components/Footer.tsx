@@ -63,16 +63,19 @@ function Footer() {
                 <Link to="services/web-development" className="text-secondary-300 hover:text-primary-600 transition-colors">Web Development</Link>
               </li>
               <li>
-                <Link to="/services" className="text-secondary-300 hover:text-primary-600 transition-colors">Mobile Apps</Link>
+                <Link to="/services/mobile-development" className="text-secondary-300 hover:text-primary-600 transition-colors">Mobile Apps</Link>
               </li>
               <li>
-                <Link to="/services" className="text-secondary-300 hover:text-primary-600 transition-colors">AI Development</Link>
+                <Link to="/services/ai-development" className="text-secondary-300 hover:text-primary-600 transition-colors">AI Development</Link>
               </li>
               <li>
-                <Link to="/services" className="text-secondary-300 hover:text-primary-600 transition-colors">UI/UX Design</Link>
+                <Link to="/services/ui-ux-design" className="text-secondary-300 hover:text-primary-600 transition-colors">UI/UX Design</Link>
               </li>
               <li>
-                <Link to="/services" className="text-secondary-300 hover:text-primary-600 transition-colors">Cloud Solutions</Link>
+                <Link to="/services/mobile-development" className="text-secondary-300 hover:text-primary-600 transition-colors">Mobile App Development</Link>
+              </li>
+              <li>
+                <Link to="/services/data-analysis" className="text-secondary-300 hover:text-primary-600 transition-colors">Data Analysis</Link>
               </li>
             </ul>
           </div>
