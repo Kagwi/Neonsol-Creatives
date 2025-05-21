@@ -60,7 +60,7 @@ function Footer() {
             <h3 className="text-lg font-semibold mb-6">Services</h3>
             <ul className="space-y-3">
               <li>
-                <Link to="/services" className="text-secondary-300 hover:text-primary-600 transition-colors">Web Development</Link>
+                <Link to="services/web-development" className="text-secondary-300 hover:text-primary-600 transition-colors">Web Development</Link>
               </li>
               <li>
                 <Link to="/services" className="text-secondary-300 hover:text-primary-600 transition-colors">Mobile Apps</Link>
