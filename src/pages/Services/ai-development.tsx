@@ -1,6 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
-import { ArrowRight } from "lucide-react";
+import { ArrowRight, ChevronDown } from "lucide-react"; // Added ChevronDown icon
 import { Link } from "react-router-dom";
 
 const aiFeatures = [
@@ -50,11 +50,19 @@ const processSteps = [
 ];
 
 const AiDevelopment = () => {
+  // Scroll handler for the down arrow
+  const scrollToHero = () => {
+    const heroSection = document.getElementById("ai-development-hero");
+    if (heroSection) {
+      heroSection.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
   return (
     <div className="bg-white text-gray-900">
       {/* Header Section */}
       <section
-        className="pt-32 pb-20 bg-secondary-950 bg-blend-overlay bg-cover bg-center text-white"
+        className="pt-32 pb-20 bg-secondary-950 bg-blend-overlay bg-cover bg-center text-white relative"
         style={{
           backgroundImage:
             'url("https://raw.githubusercontent.com/Kagwi/Neonsol-Creatives/refs/heads/main/public/pexels-david-geib-1265112-3220850.jpg")',
@@ -75,10 +83,20 @@ const AiDevelopment = () => {
             </p>
           </div>
         </div>
+
+        {/* Scroll Down Arrow */}
+        <button
+          onClick={scrollToHero}
+          aria-label="Scroll down to AI Development section"
+          className="absolute bottom-6 left-1/2 transform -translate-x-1/2 text-white animate-bounce"
+        >
+          <ChevronDown size={32} />
+        </button>
       </section>
 
       {/* AI Development Hero */}
       <div
+        id="ai-development-hero"
         className="w-full bg-cover bg-center bg-no-repeat py-32 text-center text-white"
         style={{ backgroundAttachment: "fixed" }}
       >
@@ -99,12 +117,7 @@ const AiDevelopment = () => {
           >
             Custom AI solutions tailored to your business needs, from machine learning models to intelligent assistants.
           </motion.p>
-          <Link
-            to="/contact"
-            className="inline-flex items-center px-6 py-3 bg-orange-500 text-white font-medium rounded-full hover:bg-orange-600 transition-colors duration-300"
-          >
-            Get Started <ArrowRight className="ml-2 w-5 h-5" />
-          </Link>
+          {/* Removed the Get Started button here */}
         </div>
       </div>
 
