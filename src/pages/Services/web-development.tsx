@@ -102,17 +102,17 @@ const WebDevelopment = () => (
     </div>
 
     {/* Features Section */}
-    <section className="py-20 px-6 max-w-6xl mx-auto text-center">
-      <h2 className="text-3xl font-bold mb-12">What We Offer</h2>
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+    <section className="py-20 px-6 max-w-6xl mx-auto text-center bg-gradient-to-r from-orange-50 to-white rounded-xl shadow-lg">
+      <h2 className="text-3xl md:text-4xl font-bold mb-12 text-orange-700">What We Offer</h2>
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
         {webDevFeatures.map((feature, idx) => (
           <div
             key={idx}
-            className="bg-gray-100 p-6 rounded-2xl shadow hover:shadow-lg transition-transform hover:scale-105"
+            className="bg-white p-8 rounded-3xl shadow-md hover:shadow-lg transition-transform hover:scale-105"
           >
-            <div className="text-5xl mb-4">{feature.icon}</div>
-            <h3 className="text-xl font-semibold mb-2">{feature.title}</h3>
-            <p className="text-gray-700">{feature.description}</p>
+            <div className="text-7xl md:text-5xl mb-6">{feature.icon}</div>
+            <h3 className="text-2xl md:text-xl font-semibold mb-3">{feature.title}</h3>
+            <p className="text-gray-700 text-lg md:text-base">{feature.description}</p>
           </div>
         ))}
       </div>
