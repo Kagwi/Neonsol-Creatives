@@ -49,11 +49,29 @@ const webDevProcess = [
   },
 ];
 
+const ScrollDownIndicator = () => (
+  <div className="flex flex-col items-center justify-center mt-8 animate-bounce text-white">
+    <span className="text-sm uppercase tracking-widest mb-2">Scroll Down</span>
+    <svg
+      className="w-6 h-6"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      viewBox="0 0 24 24"
+      aria-hidden="true"
+    >
+      <path d="M12 5v14M19 12l-7 7-7-7" />
+    </svg>
+  </div>
+);
+
 const WebDevelopment = () => (
   <div className="bg-white text-gray-900">
     {/* Hero Section */}
     <section
-      className="pt-32 pb-20 bg-secondary-950 bg-blend-overlay bg-cover bg-center text-white"
+      className="pt-32 pb-20 bg-secondary-950 bg-blend-overlay bg-cover bg-center text-white relative"
       style={{
         backgroundImage:
           'url("https://raw.githubusercontent.com/Kagwi/Neonsol-Creatives/refs/heads/main/public/pexels-david-geib-1265112-3220850.jpg")',
@@ -74,6 +92,8 @@ const WebDevelopment = () => (
           </p>
         </div>
       </div>
+      {/* Scroll Down Indicator */}
+      <ScrollDownIndicator />
     </section>
 
     {/* Overview Section */}
