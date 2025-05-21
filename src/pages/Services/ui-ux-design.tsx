@@ -56,7 +56,7 @@ const UiUxDesign = () => (
   <div className="bg-white text-gray-900">
     {/* Hero Section */}
     <section
-      className="pt-32 pb-20 bg-secondary-950 bg-blend-overlay bg-cover bg-center text-white"
+      className="relative pt-32 pb-20 bg-secondary-950 bg-blend-overlay bg-cover bg-center text-white"
       style={{
         backgroundImage:
           'url("https://raw.githubusercontent.com/Kagwi/Neonsol-Creatives/refs/heads/main/public/pexels-david-geib-1265112-3220850.jpg")',
@@ -73,14 +73,32 @@ const UiUxDesign = () => (
             className="text-secondary-200 text-xl mb-8 animate-slide-up"
             style={{ animationDelay: "200ms" }}
           >
-            Beautiful, intuitive designs that enhance user engagement and satisfaction across all digital touchpoints.
+            Beautiful, intuitive designs that enhance user engagement and satisfaction across all
+            digital touchpoints.
           </p>
         </div>
+      </div>
+
+      {/* Scroll Down Indicator */}
+      <div className="absolute bottom-10 left-1/2 transform -translate-x-1/2 animate-bounce cursor-pointer">
+        <a href="#overview" aria-label="Scroll down">
+          <svg
+            className="w-8 h-8 text-white"
+            fill="none"
+            stroke="currentColor"
+            strokeWidth="2"
+            viewBox="0 0 24 24"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7"></path>
+          </svg>
+        </a>
       </div>
     </section>
 
     {/* Overview Section */}
     <div
+      id="overview"
       className="w-full bg-cover bg-center bg-no-repeat py-32 text-center text-white"
       style={{ backgroundAttachment: "fixed" }}
     >
@@ -101,19 +119,11 @@ const UiUxDesign = () => (
         >
           We craft seamless experiences and interfaces that keep users engaged and happy.
         </motion.p>
-        <button
-          onClick={() => {
-            document.getElementById("features")?.scrollIntoView({ behavior: "smooth" });
-          }}
-          className="inline-flex items-center px-6 py-3 bg-white text-gray-900 font-medium rounded-full hover:bg-gray-200 transition-colors duration-300"
-        >
-          Scroll Down <ArrowRight className="ml-2 w-5 h-5" />
-        </button>
       </div>
     </div>
 
     {/* Features Section */}
-    <section id="features" className="py-20 px-6 max-w-6xl mx-auto text-center">
+    <section className="py-20 px-6 max-w-6xl mx-auto text-center">
       <h2 className="text-3xl font-bold mb-12">What We Offer</h2>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
         {designFeatures.map((feature, idx) => (
@@ -158,7 +168,8 @@ const UiUxDesign = () => (
     <section className="py-20 px-6 text-center">
       <h2 className="text-3xl font-bold mb-4">Start Designing a Better Experience</h2>
       <p className="text-gray-700 mb-8 max-w-xl mx-auto">
-        Whether launching a new product or improving an existing one, our design team is ready to elevate your UX.
+        Whether launching a new product or improving an existing one, our design team is ready to
+        elevate your UX.
       </p>
       <Link
         to="/contact"
