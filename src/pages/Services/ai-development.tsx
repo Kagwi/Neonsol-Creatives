@@ -1,6 +1,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { ArrowRight } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const aiFeatures = [
   {
@@ -51,7 +52,6 @@ const processSteps = [
 const AiDevelopment = () => {
   return (
     <div className="bg-white text-gray-900">
-
       {/* Header Section (About Us Hero) */}
       <section
         className="pt-32 pb-20 bg-secondary-950 bg-blend-overlay bg-cover bg-center text-white"
@@ -65,7 +65,7 @@ const AiDevelopment = () => {
         <div className="container mx-auto px-4">
           <div className="max-w-3xl">
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold mb-6 animate-slide-up">
-               <span className="text-primary-600">Artificial Intelligence Services</span>
+              <span className="text-primary-600">Artificial Intelligence Services</span>
             </h1>
             <p
               className="text-secondary-200 text-xl mb-8 animate-slide-up"
@@ -80,10 +80,7 @@ const AiDevelopment = () => {
       {/* AI Development Hero */}
       <div
         className="w-full bg-cover bg-center bg-no-repeat py-32 text-center text-white"
-        style={{
-          backgroundImage: "url('/images/ai-bg.jpg')", // optional
-          backgroundAttachment: "fixed",
-        }}
+        style={{ backgroundAttachment: "fixed" }}
       >
         <div className="max-w-3xl mx-auto px-6">
           <motion.h1
@@ -102,12 +99,12 @@ const AiDevelopment = () => {
           >
             Custom AI solutions tailored to your business needs, from machine learning models to intelligent assistants.
           </motion.p>
-          <a
-            href="#contact"
-            className="inline-flex items-center px-6 py-3 bg-white text-black font-medium rounded-full hover:bg-gray-200 transition"
+          <Link
+            to="/contact"
+            className="inline-flex items-center px-6 py-3 bg-orange-500 text-white font-medium rounded-full hover:bg-orange-600 transition-colors duration-300"
           >
             Get Started <ArrowRight className="ml-2 w-5 h-5" />
-          </a>
+          </Link>
         </div>
       </div>
 
@@ -159,12 +156,12 @@ const AiDevelopment = () => {
         <p className="text-gray-700 mb-8 max-w-xl mx-auto">
           Whether you're looking to automate tasks or unlock insights from data, our AI experts are ready to help.
         </p>
-        <a
-          href="#contact"
-          className="inline-flex items-center px-6 py-3 bg-black text-white font-medium rounded-full hover:bg-gray-800 transition"
+        <Link
+          to="/contact"
+          className="inline-flex items-center px-6 py-3 bg-orange-500 text-white font-medium rounded-full hover:bg-orange-600 transition-colors duration-300"
         >
           Schedule a Consultation <ArrowRight className="ml-2 w-5 h-5" />
-        </a>
+        </Link>
       </section>
     </div>
   );
