@@ -65,13 +65,13 @@ const AiDevelopment = () => {
         <div className="container mx-auto px-4">
           <div className="max-w-3xl">
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold mb-6 animate-slide-up">
-              Learn More <span className="text-primary-600">About Us</span>
+               <span className="text-primary-600">Artificial Intelligence Services</span>
             </h1>
             <p
               className="text-secondary-200 text-xl mb-8 animate-slide-up"
               style={{ animationDelay: "200ms" }}
             >
-              Understand what Neonsol Creatives stands for.
+              Contact us today for any of the following services!
             </p>
           </div>
         </div>
