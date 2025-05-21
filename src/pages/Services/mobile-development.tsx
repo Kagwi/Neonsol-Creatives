@@ -1,6 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
-import { ArrowRight } from "lucide-react";
+import { ArrowRight, ChevronDown } from "lucide-react";
 import { Link } from "react-router-dom";
 
 const mobileFeatures = [
@@ -8,25 +8,25 @@ const mobileFeatures = [
     title: "iOS & Android Apps",
     description:
       "We build high-performance native apps tailored to each platform’s design and performance standards.",
-    icon: "\ud83d\udcf1",
+    icon: "📱",
   },
   {
     title: "Cross-Platform Development",
     description:
       "Using Flutter or React Native, we create apps that run smoothly on both iOS and Android from a single codebase.",
-    icon: "\ud83d\udd01",
+    icon: "🔁",
   },
   {
     title: "UI/UX Design",
     description:
       "Beautiful, intuitive, and user-friendly interfaces that keep users engaged and satisfied.",
-    icon: "\ud83c\udfa8",
+    icon: "🎨",
   },
   {
     title: "App Store Deployment",
     description:
       "We handle publishing and updating your app on the App Store and Google Play with full compliance.",
-    icon: "\ud83d\ude80",
+    icon: "🚀",
   },
 ];
 
@@ -76,6 +76,16 @@ const MobileDevelopment = () => (
       </div>
     </section>
 
+    {/* Scroll Down Indicator */}
+    <div className="flex justify-center items-center mt-[-40px] mb-10">
+      <motion.div
+        animate={{ y: [0, 10, 0] }}
+        transition={{ duration: 1.5, repeat: Infinity }}
+      >
+        <ChevronDown className="w-8 h-8 text-gray-300" />
+      </motion.div>
+    </div>
+
     {/* Overview Section */}
     <div
       className="w-full bg-cover bg-center bg-no-repeat py-32 text-center text-white"
@@ -98,12 +108,7 @@ const MobileDevelopment = () => (
         >
           From concept to launch, we craft intuitive mobile apps that users love.
         </motion.p>
-        <Link
-          to="/contact"
-          className="inline-flex items-center px-6 py-3 bg-orange-500 text-white font-medium rounded-full hover:bg-orange-600 transition-colors duration-300"
-        >
-          Get Started <ArrowRight className="ml-2 w-5 h-5" />
-        </Link>
+        {/* Removed "Get Started" button here */}
       </div>
     </div>
 
