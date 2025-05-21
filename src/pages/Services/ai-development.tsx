@@ -1,12 +1,7 @@
-"use client";
-
 import React from "react";
 import { motion } from "framer-motion";
-import { Button } from "@/components/ui/button";
-import { cn } from "@/lib/utils";
 import { ArrowRight } from "lucide-react";
 
-// Sample features of AI Development
 const aiFeatures = [
   {
     title: "Custom AI Models",
@@ -34,7 +29,6 @@ const aiFeatures = [
   },
 ];
 
-// Optional process steps
 const processSteps = [
   {
     title: "Problem Discovery",
@@ -56,18 +50,44 @@ const processSteps = [
 
 const AiDevelopment = () => {
   return (
-    <div className="bg-background text-primary">
-      {/* Hero Section */}
-      <div
-        className="w-full bg-cover bg-center bg-no-repeat py-32 text-center"
+    <div className="bg-white text-gray-900">
+
+      {/* Header Section (About Us Hero) */}
+      <section
+        className="pt-32 pb-20 bg-secondary-950 bg-blend-overlay bg-cover bg-center text-white"
         style={{
-          backgroundImage: "url('/images/ai-bg.jpg')",
+          backgroundImage:
+            'url("https://raw.githubusercontent.com/Kagwi/Neonsol-Creatives/refs/heads/main/public/pexels-david-geib-1265112-3220850.jpg")',
+          backgroundPosition: "center center",
+          backgroundAttachment: "fixed",
+        }}
+      >
+        <div className="container mx-auto px-4">
+          <div className="max-w-3xl">
+            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold mb-6 animate-slide-up">
+              Learn More <span className="text-primary-600">About Us</span>
+            </h1>
+            <p
+              className="text-secondary-200 text-xl mb-8 animate-slide-up"
+              style={{ animationDelay: "200ms" }}
+            >
+              Understand what Neonsol Creatives stands for.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* AI Development Hero */}
+      <div
+        className="w-full bg-cover bg-center bg-no-repeat py-32 text-center text-white"
+        style={{
+          backgroundImage: "url('/images/ai-bg.jpg')", // optional
           backgroundAttachment: "fixed",
         }}
       >
         <div className="max-w-3xl mx-auto px-6">
           <motion.h1
-            className="text-5xl font-bold mb-6 text-white"
+            className="text-5xl font-bold mb-6"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
@@ -82,65 +102,70 @@ const AiDevelopment = () => {
           >
             Custom AI solutions tailored to your business needs, from machine learning models to intelligent assistants.
           </motion.p>
-          <Button variant="secondary" size="lg">
-            Get Started <ArrowRight className="ml-2 h-5 w-5" />
-          </Button>
+          <a
+            href="#contact"
+            className="inline-flex items-center px-6 py-3 bg-white text-black font-medium rounded-full hover:bg-gray-200 transition"
+          >
+            Get Started <ArrowRight className="ml-2 w-5 h-5" />
+          </a>
         </div>
       </div>
 
       {/* Features Section */}
-      <div className="py-20 px-6 max-w-6xl mx-auto text-center">
+      <section className="py-20 px-6 max-w-6xl mx-auto text-center">
         <h2 className="text-3xl font-bold mb-12">What We Offer</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           {aiFeatures.map((feature, idx) => (
             <div
               key={idx}
-              className="bg-muted p-6 rounded-2xl shadow-lg transition-transform hover:scale-[1.02]"
+              className="bg-gray-100 p-6 rounded-2xl shadow hover:shadow-lg transition-transform hover:scale-105"
             >
               <div className="text-5xl mb-4">{feature.icon}</div>
               <h3 className="text-xl font-semibold mb-2">{feature.title}</h3>
-              <p className="text-secondary-700">{feature.description}</p>
+              <p className="text-gray-700">{feature.description}</p>
             </div>
           ))}
         </div>
-      </div>
+      </section>
 
       {/* Process Section */}
-      <div className="py-20 bg-secondary/10 px-6">
+      <section className="py-20 bg-gray-50 px-6">
         <div className="max-w-4xl mx-auto">
           <h2 className="text-3xl font-bold text-center mb-12">Our AI Development Process</h2>
           <div className="flex flex-col gap-12">
             {processSteps.map((step, idx) => (
               <div
                 key={idx}
-                className={cn(
-                  "flex flex-col md:flex-row items-start gap-6",
-                  idx % 2 === 1 && "md:flex-row-reverse"
-                )}
+                className={`flex flex-col md:flex-row items-start gap-6 ${
+                  idx % 2 === 1 ? "md:flex-row-reverse" : ""
+                }`}
               >
-                <div className="flex-shrink-0 w-12 h-12 rounded-full bg-primary text-white flex items-center justify-center font-bold">
+                <div className="flex-shrink-0 w-12 h-12 rounded-full bg-black text-white flex items-center justify-center font-bold">
                   {idx + 1}
                 </div>
                 <div>
                   <h3 className="text-xl font-semibold mb-2">{step.title}</h3>
-                  <p className="text-secondary-700">{step.description}</p>
+                  <p className="text-gray-700">{step.description}</p>
                 </div>
               </div>
             ))}
           </div>
         </div>
-      </div>
+      </section>
 
       {/* Call to Action */}
-      <div className="py-20 px-6 text-center">
+      <section className="py-20 px-6 text-center">
         <h2 className="text-3xl font-bold mb-4">Let's Build Smarter Together</h2>
-        <p className="text-secondary-700 mb-8 max-w-xl mx-auto">
+        <p className="text-gray-700 mb-8 max-w-xl mx-auto">
           Whether you're looking to automate tasks or unlock insights from data, our AI experts are ready to help.
         </p>
-        <Button size="lg">
-          Schedule a Consultation <ArrowRight className="ml-2 h-5 w-5" />
-        </Button>
-      </div>
+        <a
+          href="#contact"
+          className="inline-flex items-center px-6 py-3 bg-black text-white font-medium rounded-full hover:bg-gray-800 transition"
+        >
+          Schedule a Consultation <ArrowRight className="ml-2 w-5 h-5" />
+        </a>
+      </section>
     </div>
   );
 };
