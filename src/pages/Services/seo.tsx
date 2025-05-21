@@ -1,6 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
-import { ArrowRight } from "lucide-react";
+import { ArrowRight, ChevronDown } from "lucide-react";
 import { Link } from "react-router-dom";
 
 const seoFeatures = [
@@ -76,6 +76,16 @@ const Seo = () => (
       </div>
     </section>
 
+    {/* Scroll Down Indicator */}
+    <div className="flex justify-center items-center mt-[-40px] mb-10">
+      <motion.div
+        animate={{ y: [0, 10, 0] }}
+        transition={{ duration: 1.5, repeat: Infinity }}
+      >
+        <ChevronDown className="w-8 h-8 text-gray-300" />
+      </motion.div>
+    </div>
+
     {/* Overview Section */}
     <div
       className="w-full bg-cover bg-center bg-no-repeat py-32 text-center text-white"
@@ -98,12 +108,7 @@ const Seo = () => (
         >
           From audits to link building, we help your website climb the search rankings effectively.
         </motion.p>
-        <Link
-          to="/contact"
-          className="inline-flex items-center px-6 py-3 bg-orange-500 text-white font-medium rounded-full hover:bg-orange-600 transition-colors duration-300"
-        >
-          Get Started <ArrowRight className="ml-2 w-5 h-5" />
-        </Link>
+        {/* Removed "Get Started" button here */}
       </div>
     </div>
 
