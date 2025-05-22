@@ -57,8 +57,7 @@ function ContactPage() {
                   <div>
                     <h3 className="text-lg font-medium text-secondary-900 mb-1">Email</h3>
                     <p className="text-secondary-600">
-                      Info: info@neonsolcreatives.com<br />
-                      Support: support@neonsolcreatives.com
+                      Support: support@neonsolcreatives@gmail.com
                     </p>
                   </div>
                 </div>
