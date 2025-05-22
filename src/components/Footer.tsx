@@ -76,7 +76,7 @@ function Footer() {
               </div>
               <div className="flex items-center space-x-3">
                 <Mail size={20} className="text-primary-600 flex-shrink-0" />
-                <span className="text-secondary-300">info@neonsolcreatives.com</span>
+                <span className="text-secondary-300">neonsolcreatives@gmail.com</span>
               </div>
             </div>
           </div>
