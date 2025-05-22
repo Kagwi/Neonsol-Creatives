@@ -8,7 +8,7 @@ function Footer() {
     <footer
       className="relative text-white bg-black bg-opacity-70"
       style={{
-        backgroundImage: "url('https://images.unsplash.com/photo-1517336714731-489689fd1ca8?auto=format&fit=crop&w=1950&q=80')",
+        backgroundImage: "url('https://videos.openai.com/vg-assets/assets%2Ftask_01jvww14qhenmaade517abme2g%2F1747946951_img_3.webp?st=2025-05-22T19%3A13%3A26Z&se=2025-05-28T20%3A13%3A26Z&sks=b&skt=2025-05-22T19%3A13%3A26Z&ske=2025-05-28T20%3A13%3A26Z&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skoid=3d249c53-07fa-4ba4-9b65-0bf8eb4ea46a&skv=2019-02-02&sv=2018-11-09&sr=b&sp=r&spr=https%2Chttp&sig=AgQwQ%2BMO3bP4KNmMOBDX%2FNJew5IIo%2BYcw3sdXUy4BwE%3D&az=oaivgprodscus')",
         backgroundSize: 'cover',
         backgroundPosition: 'center',
       }}
