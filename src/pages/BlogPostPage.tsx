@@ -167,9 +167,7 @@ function BlogPostPage() {
                 </div>
                 <div className="flex-1 text-center md:text-left">
                   <h3 className="text-xl font-semibold mb-2 text-secondary-900">{post.author}</h3>
-                  <p className="text-secondary-600 mb-4">
-                    Senior Technology Consultant at Neonsol Creatives with over 10 years of experience in digital transformation and emerging technologies.
-                  </p>
+                  
                   <div className="flex space-x-4 justify-center md:justify-start">
                     <a href="#" className="text-primary-600 hover:text-primary-800 transition-colors">
                       <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
