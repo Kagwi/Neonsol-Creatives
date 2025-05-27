@@ -12,9 +12,9 @@ function AboutPage() {
   useEffect(() => {
     const duration = 5000; // Total animation duration in ms
     const increments = {
-      years: 10,
-      projects: 200,
-      team: 50,
+      years: 3,
+      projects: 50,
+      team: 10,
       satisfaction: 98
     };
 
