@@ -13,7 +13,7 @@ export const testimonials: Testimonial[] = [
     name: "Michael O.",
     role: "Founder",
     company: "Elevate Startup",
-    quote: "As a startup founder, I needed a technology partner who understood our vision and could scale with us. Neonsol delivered a stunning website and mobile app that our users love.",
+    quote: "As a startup founder, I needed a technology partner who understood our vision and could scale with us. Neonsol conducted an amazing market analysis that proved extremely helpful and elevated our business intelligence.",
   },
   {
     id: 3,
