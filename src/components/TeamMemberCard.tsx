@@ -7,7 +7,7 @@ interface TeamMemberCardProps {
   bio: string;
 }
 
-const TeamMemberCard: React.FC<TeamMemberCardProps> = ({ name, role, image, bio }) => {
+const TeamMemberCard: React.FC<TeamMemberCardProps> = ({ name }) => {
   return (
     <div className="bg-white rounded-lg overflow-hidden shadow-soft group">
       <div className="relative h-64 overflow-hidden">
@@ -20,7 +20,8 @@ const TeamMemberCard: React.FC<TeamMemberCardProps> = ({ name, role, image, bio 
       </div>
       <div className="p-6">
         <h3 className="text-xl font-semibold text-secondary-900">{name}</h3>
-        
+        <p className="text-primary-600 font-medium mb-4">{role}</p>
+        <p className="text-secondary-600 leading-relaxed">{bio}</p>
       </div>
     </div>
   );
