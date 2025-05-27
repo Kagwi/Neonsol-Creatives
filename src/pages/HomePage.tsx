@@ -33,7 +33,7 @@ function HomePage() {
       {/* LEFT TEXT BLOCK */}
       <div className="lg:w-1/2 mb-12 lg:mb-0 animate-slide-up" style={{ animationDelay: '300ms' }}>
         <div className="inline-flex items-center px-4 py-2 bg-primary-600/10 rounded-full text-primary-600 text-sm font-medium mb-6">
-          <Zap size={16} className="mr-2" />
+          
           Where Creativity Meets Innovation
         </div>
         <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white leading-tight mb-6">
