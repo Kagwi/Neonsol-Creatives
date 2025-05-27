@@ -144,7 +144,7 @@ function HomePage() {
       ].map((service, index) => (
         <div 
           key={index}
-          className="class="relative bg-black opacity-100 p-8 rounded-2xl border-2 border-orange-500/30 transition-all 
+          className="class="relative bg-black p-8 rounded-2xl border-2 border-orange-500/30 transition-all 
                     duration-500 hover:border-orange-500 hover:shadow-[0_0_40px_rgba(255,165,0,0.3)]
                     group cursor-default overflow-hidden animate-fadeInUp"
           style={{
