@@ -2,9 +2,6 @@ import React from 'react';
 
 interface TeamMemberCardProps {
   name: string;
-  role: string;
-  image: string;
-  bio: string;
 }
 
 const TeamMemberCard: React.FC<TeamMemberCardProps> = ({ name }) => {
