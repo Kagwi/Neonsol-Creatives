@@ -19,7 +19,7 @@ function Footer() {
           {/* Company Info */}
           <div>
             <Link to="/" className="flex items-center space-x-2 text-white mb-4">
-              <img src="https://github.com/Kagwi/Neonsol-Creatives/blob/main/public/Neonsol%20Logo%20Final.PNG?raw=true" alt="Neonsol Logo" className="w-6 h-6" />
+              <img src="https://github.com/Kagwi/Neonsol-Creatives/blob/main/public/Neonsol%20Logo%20Final.PNG?raw=true" alt="Neonsol Logo" className="w-6 h-15" />
               <span className="text-xl font-bold">Neonsol Creatives</span>
             </Link>
             <p className="text-secondary-300 mb-6">
