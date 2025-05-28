@@ -61,7 +61,7 @@ function Navbar({ scrolled }: NavbarProps) {
           <img
             src="https://github.com/Kagwi/Neonsol-Creatives/blob/main/public/Neonsol%20Logo%20Final.PNG?raw=true"
             alt="Neonsol Logo"
-            className="h-20 w-auto"
+            className="h-40 w-auto"
           />
           <span className="text-xl font-bold">Neonsol Creatives</span>
         </Link>
