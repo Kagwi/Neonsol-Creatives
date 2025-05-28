@@ -68,12 +68,12 @@ function ContactPage() {
                   <div>
                     <h3 className="text-lg font-medium text-secondary-900 mb-1">Business Hours</h3>
                     <p className="text-secondary-600">
-                      Monday: 9:00 AM - 6:00 PM<br />
-                      Tuesday: 9:00 AM - 6:00 PM<br />
-                      Wednesday: 9:00 AM - 6:00 PM<br />
-                      Thursday: 9:00 AM - 6:00 PM<br />
-                      Friday: 9:00 AM - 6:00 PM<br />
-                      Saturday: 9:00 AM - 6:00 PM<br />
+                      Monday: 9:00 AM – 6:00 PM<br />
+                      Tuesday: 9:00 AM – 6:00 PM<br />
+                      Wednesday: 9:00 AM – 6:00 PM<br />
+                      Thursday: 9:00 AM – 6:00 PM<br />
+                      Friday: 9:00 AM – 6:00 PM<br />
+                      Saturday: 9:00 AM – 6:00 PM<br />
                       Sunday: Closed
                     </p>
                   </div>
@@ -109,15 +109,10 @@ function ContactPage() {
                 </div>
               </div>
             </div>
+
             <div className="lg:w-2/3 lg:pl-16">
               <h2 className="text-2xl font-semibold text-secondary-900 mb-6">Send Us a Message</h2>
-              {/* Updated to open default mail client */}
-              <a
-                href="mailto:neonsolcreatives@gmail.com"
-                className="inline-block px-6 py-3 bg-primary-600 text-white rounded-lg hover:bg-primary-700 transition-colors"
-              >
-                Send Message
-              </a>
+              <ContactForm />
             </div>
           </div>
         </div>
