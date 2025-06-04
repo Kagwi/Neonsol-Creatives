@@ -93,7 +93,7 @@ const Seo = () => (
     >
       <div className="max-w-3xl mx-auto px-6">
         <motion.h1
-          className="text-5xl font-bold"
+          className="text-4xl font-bold mb-2"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
@@ -101,7 +101,7 @@ const Seo = () => (
           Data-Driven SEO That Delivers Results
         </motion.h1>
         <motion.p
-          className="text-xl text-white/80"
+          className="text-lg text-white/80 mb-4"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.2 }}
