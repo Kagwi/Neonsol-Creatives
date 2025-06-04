@@ -3,57 +3,57 @@ import { motion } from "framer-motion";
 import { ArrowRight, ChevronDown } from "lucide-react";
 import { Link } from "react-router-dom";
 
-const mobileFeatures = [
+const seoFeatures = [
   {
-    title: "iOS & Android Apps",
+    title: "Keyword Research",
     description:
-      "We build high-performance native apps tailored to each platform’s design and performance standards.",
-    icon: "📱",
+      "We identify the best keywords for your niche to ensure high search visibility and relevant traffic.",
+    icon: "🔍",
   },
   {
-    title: "Cross-Platform Development",
+    title: "On-Page SEO",
     description:
-      "Using Flutter or React Native, we create apps that run smoothly on both iOS and Android from a single codebase.",
-    icon: "🔁",
+      "From meta tags to content optimization, we enhance every page to align with SEO best practices.",
+    icon: "🛠️",
   },
   {
-    title: "UI/UX Design",
+    title: "Technical SEO",
     description:
-      "Beautiful, intuitive, and user-friendly interfaces that keep users engaged and satisfied.",
-    icon: "🎨",
+      "We optimize site structure, performance, and crawlability to boost your search engine ranking.",
+    icon: "⚙️",
   },
   {
-    title: "App Store Deployment",
+    title: "Link Building",
     description:
-      "We handle publishing and updating your app on the App Store and Google Play with full compliance.",
-    icon: "🚀",
+      "High-quality backlink strategies that build your website authority and drive organic traffic.",
+    icon: "🔗",
   },
 ];
 
-const mobileProcess = [
+const seoProcess = [
   {
-    title: "Discovery & Planning",
-    description: "We understand your goals, users, and product vision to define the roadmap.",
+    title: "SEO Audit",
+    description: "We evaluate your website’s current performance to find opportunities and issues.",
   },
   {
-    title: "Design & Prototyping",
-    description: "Wireframes and interactive prototypes bring your concept to life visually.",
+    title: "Strategy Development",
+    description: "We define the right mix of keywords, content, and structure for your goals.",
   },
   {
-    title: "Development",
-    description: "Agile development using the latest mobile technologies for speed and quality.",
+    title: "Execution",
+    description: "We implement technical fixes, content changes, and optimizations.",
   },
   {
-    title: "Launch & Support",
-    description: "We assist with app store launch, updates, and ongoing maintenance.",
+    title: "Performance Tracking",
+    description: "We monitor and report results to refine strategies for ongoing improvement.",
   },
 ];
 
-const MobileDevelopment = () => (
+const Seo = () => (
   <div className="bg-white text-gray-900">
     {/* Hero Section */}
     <section
-      className="relative pt-12 pb-16 bg-secondary-950 bg-blend-overlay bg-cover bg-center text-white -mt-12"
+      className="pt-32 pb-20 bg-secondary-950 bg-blend-overlay bg-cover bg-center text-white"
       style={{
         backgroundImage:
           'url("https://raw.githubusercontent.com/Kagwi/Neonsol-Creatives/refs/heads/main/public/pexels-david-geib-1265112-3220850.jpg")',
@@ -64,20 +64,20 @@ const MobileDevelopment = () => (
       <div className="container mx-auto px-4">
         <div className="max-w-3xl">
           <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold mb-6 animate-slide-up">
-            <span className="text-primary-600">Mobile App Development</span>
+            <span className="text-primary-600">SEO Optimization</span>
           </h1>
           <p
             className="text-secondary-200 text-xl mb-8 animate-slide-up"
             style={{ animationDelay: "200ms" }}
           >
-            Native and cross-platform apps for seamless mobile experiences.
+            Improve your online visibility and drive organic traffic through data-driven SEO strategies.
           </p>
         </div>
       </div>
     </section>
 
     {/* Scroll Down Indicator */}
-    <div className="flex justify-center items-center -mt-10 mb-10">
+    <div className="flex justify-center items-center mt-[-40px] mb-10">
       <motion.div
         animate={{ y: [0, 10, 0] }}
         transition={{ duration: 1.5, repeat: Infinity }}
@@ -88,25 +88,25 @@ const MobileDevelopment = () => (
 
     {/* Overview Section */}
     <div
-      className="w-full bg-cover bg-center bg-no-repeat py-32 text-center text-white"
+      className="w-full bg-cover bg-center bg-no-repeat pt-4 pb-0 text-center text-white"
       style={{ backgroundAttachment: "fixed" }}
     >
       <div className="max-w-3xl mx-auto px-6">
         <motion.h1
-          className="text-5xl font-bold mb-6"
+          className="text-5xl font-bold"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
         >
-          Build Mobile Experiences that Delight
+          Data-Driven SEO That Delivers Results
         </motion.h1>
         <motion.p
-          className="text-xl text-white/80 mb-8"
+          className="text-xl text-white/80"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.2 }}
         >
-          From concept to launch, we craft intuitive mobile apps that users love.
+          From audits to link building, we help your website climb the search rankings effectively.
         </motion.p>
       </div>
     </div>
@@ -115,7 +115,7 @@ const MobileDevelopment = () => (
     <section className="py-20 px-6 max-w-6xl mx-auto text-center">
       <h2 className="text-3xl font-bold mb-12">What We Offer</h2>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-        {mobileFeatures.map((feature, idx) => (
+        {seoFeatures.map((feature, idx) => (
           <div
             key={idx}
             className="bg-gray-100 p-6 rounded-2xl shadow hover:shadow-lg transition-transform hover:scale-105"
@@ -131,9 +131,9 @@ const MobileDevelopment = () => (
     {/* Process Section */}
     <section className="py-20 bg-gray-50 px-6">
       <div className="max-w-4xl mx-auto">
-        <h2 className="text-3xl font-bold text-center mb-12">Our App Development Process</h2>
+        <h2 className="text-3xl font-bold text-center mb-12">Our SEO Optimization Process</h2>
         <div className="flex flex-col gap-12">
-          {mobileProcess.map((step, idx) => (
+          {seoProcess.map((step, idx) => (
             <div
               key={idx}
               className={`flex flex-col md:flex-row items-start gap-6 ${
@@ -155,9 +155,9 @@ const MobileDevelopment = () => (
 
     {/* Call to Action */}
     <section className="py-20 px-6 text-center">
-      <h2 className="text-3xl font-bold mb-4">Let’s Launch Your App Idea</h2>
+      <h2 className="text-3xl font-bold mb-4">Grow Your Visibility with Confidence</h2>
       <p className="text-gray-700 mb-8 max-w-xl mx-auto">
-        Whether it’s iOS, Android, or both, our mobile dev team is ready to bring your vision to life.
+        Our SEO experts are ready to help you climb the search engine ranks and drive sustainable traffic.
       </p>
       <Link
         to="/contact"
@@ -169,4 +169,4 @@ const MobileDevelopment = () => (
   </div>
 );
 
-export default MobileDevelopment;
+export default Seo;
