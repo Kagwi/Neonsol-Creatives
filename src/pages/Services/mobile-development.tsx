@@ -50,10 +50,10 @@ const mobileProcess = [
 ];
 
 const MobileDevelopment = () => (
-  <div className="bg-white text-gray-900 m-0 p-0">
+  <div className="bg-white text-gray-900">
     {/* Hero Section */}
     <section
-      className="pt-0 pb-20 bg-secondary-950 bg-blend-overlay bg-cover bg-center text-white"
+      className="pt-32 pb-6 bg-secondary-950 bg-blend-overlay bg-cover bg-center text-white"
       style={{
         backgroundImage:
           'url("https://raw.githubusercontent.com/Kagwi/Neonsol-Creatives/refs/heads/main/public/pexels-david-geib-1265112-3220850.jpg")',
@@ -88,7 +88,7 @@ const MobileDevelopment = () => (
 
     {/* Overview Section */}
     <div
-      className="w-full bg-cover bg-center bg-no-repeat py-32 text-center text-white"
+      className="w-full bg-cover bg-center bg-no-repeat pt-12 pb-0 text-center text-white"
       style={{ backgroundAttachment: "fixed" }}
     >
       <div className="max-w-3xl mx-auto px-6">
@@ -112,7 +112,7 @@ const MobileDevelopment = () => (
     </div>
 
     {/* Features Section */}
-    <section className="py-20 px-6 max-w-6xl mx-auto text-center">
+    <section className="pt-0 pb-16 px-6 max-w-6xl mx-auto text-center">
       <h2 className="text-3xl font-bold mb-12">What We Offer</h2>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
         {mobileFeatures.map((feature, idx) => (
