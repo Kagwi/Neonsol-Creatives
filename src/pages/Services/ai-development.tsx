@@ -97,7 +97,7 @@ const AiDevelopment = () => {
       {/* AI Development Hero */}
       <div
         id="ai-development-hero"
-        className="w-full bg-cover bg-center bg-no-repeat py-32 text-center text-white"
+        className="w-full bg-cover bg-center bg-no-repeat pt-20 pb-10 text-center text-white"
         style={{ backgroundAttachment: "fixed" }}
       >
         <div className="max-w-3xl mx-auto px-6">
