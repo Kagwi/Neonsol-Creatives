@@ -108,7 +108,6 @@ const MobileDevelopment = () => (
         >
           From concept to launch, we craft intuitive mobile apps that users love.
         </motion.p>
-        {/* Removed "Get Started" button here */}
       </div>
     </div>
 
