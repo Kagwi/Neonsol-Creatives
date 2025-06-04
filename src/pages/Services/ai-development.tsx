@@ -1,6 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
-import { ArrowRight, ChevronDown } from "lucide-react"; // Added ChevronDown icon
+import { ArrowRight, ChevronDown } from "lucide-react";
 import { Link } from "react-router-dom";
 
 const aiFeatures = [
@@ -50,7 +50,6 @@ const processSteps = [
 ];
 
 const AiDevelopment = () => {
-  // Scroll handler for the down arrow
   const scrollToHero = () => {
     const heroSection = document.getElementById("ai-development-hero");
     if (heroSection) {
@@ -62,7 +61,7 @@ const AiDevelopment = () => {
     <div className="bg-white text-gray-900">
       {/* Header Section */}
       <section
-        className="pt-32 pb-20 bg-secondary-950 bg-blend-overlay bg-cover bg-center text-white relative"
+        className="pt-32 pb-10 bg-secondary-950 bg-blend-overlay bg-cover bg-center text-white relative"
         style={{
           backgroundImage:
             'url("https://raw.githubusercontent.com/Kagwi/Neonsol-Creatives/refs/heads/main/public/pexels-david-geib-1265112-3220850.jpg")',
@@ -88,7 +87,7 @@ const AiDevelopment = () => {
         <button
           onClick={scrollToHero}
           aria-label="Scroll down to AI Development section"
-          className="absolute bottom-6 left-1/2 transform -translate-x-1/2 text-white animate-bounce"
+          className="absolute bottom-4 left-1/2 transform -translate-x-1/2 text-white animate-bounce"
         >
           <ChevronDown size={32} />
         </button>
@@ -97,7 +96,7 @@ const AiDevelopment = () => {
       {/* AI Development Hero */}
       <div
         id="ai-development-hero"
-        className="w-full bg-cover bg-center bg-no-repeat pt-20 pb-10 text-center text-white"
+        className="w-full bg-cover bg-center bg-no-repeat pt-12 pb-4 text-center text-white"
         style={{ backgroundAttachment: "fixed" }}
       >
         <div className="max-w-3xl mx-auto px-6">
@@ -117,12 +116,11 @@ const AiDevelopment = () => {
           >
             Custom AI solutions tailored to your business needs, from machine learning models to intelligent assistants.
           </motion.p>
-          {/* Removed the Get Started button here */}
         </div>
       </div>
 
       {/* Features Section */}
-      <section className="pt-10 pb-20 px-6 max-w-6xl mx-auto text-center bg-gradient-to-r from-orange-50 to-white rounded-xl shadow-lg">
+      <section className="pt-4 pb-16 px-6 max-w-6xl mx-auto text-center bg-gradient-to-r from-orange-50 to-white rounded-xl shadow-lg">
         <h2 className="text-3xl md:text-4xl font-bold mb-12 text-orange-700">What We Offer</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
           {aiFeatures.map((feature, idx) => (
