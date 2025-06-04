@@ -53,11 +53,10 @@ const DataAnalysis = () => (
   <div className="bg-white text-gray-900">
     {/* Hero Section */}
     <section
-      className="relative pt-32 pb-20 bg-secondary-950 bg-blend-overlay bg-cover bg-center text-white"
+      className="relative pt-32 pb-6 bg-secondary-950 bg-blend-overlay bg-cover bg-center text-white"
       style={{
         backgroundImage:
           'url("https://raw.githubusercontent.com/Kagwi/Neonsol-Creatives/refs/heads/main/public/pexels-david-geib-1265112-3220850.jpg")',
-        backgroundPosition: "center center",
         backgroundAttachment: "fixed",
       }}
     >
@@ -67,7 +66,7 @@ const DataAnalysis = () => (
             <span className="text-primary-600">Data Analysis Services</span>
           </h1>
           <p
-            className="text-secondary-200 text-xl mb-8 animate-slide-up"
+            className="text-secondary-200 text-xl mb-0 animate-slide-up"
             style={{ animationDelay: "200ms" }}
           >
             Transform raw data into actionable insights with our advanced analytics services.
@@ -76,7 +75,7 @@ const DataAnalysis = () => (
       </div>
 
       {/* Scroll Down Indicator */}
-      <div className="absolute bottom-10 left-1/2 transform -translate-x-1/2 animate-bounce cursor-pointer">
+      <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 animate-bounce cursor-pointer">
         <a href="#overview" aria-label="Scroll down">
           <svg
             className="w-8 h-8 text-white"
@@ -95,12 +94,12 @@ const DataAnalysis = () => (
     {/* Overview Section */}
     <div
       id="overview"
-      className="w-full bg-cover bg-center bg-no-repeat py-32 text-center text-white"
+      className="w-full bg-cover bg-center bg-no-repeat pt-12 pb-0 text-center text-white"
       style={{ backgroundAttachment: "fixed" }}
     >
       <div className="max-w-3xl mx-auto px-6">
         <motion.h1
-          className="text-5xl font-bold mb-6"
+          className="text-5xl font-bold mb-4"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
@@ -108,7 +107,7 @@ const DataAnalysis = () => (
           Data Analytics & Insights
         </motion.h1>
         <motion.p
-          className="text-xl text-white/80 mb-8"
+          className="text-xl text-white/80 mb-0"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.2 }}
@@ -119,7 +118,7 @@ const DataAnalysis = () => (
     </div>
 
     {/* Features Section */}
-    <section className="py-20 px-6 max-w-6xl mx-auto text-center">
+    <section className="pt-0 pb-20 px-6 max-w-6xl mx-auto text-center">
       <h2 className="text-3xl font-bold mb-12">What We Offer</h2>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
         {analysisFeatures.map((feature, idx) => (
