@@ -50,10 +50,10 @@ const mobileProcess = [
 ];
 
 const MobileDevelopment = () => (
-  <div className="bg-white text-gray-900">
+  <div className="bg-white text-gray-900 m-0 p-0">
     {/* Hero Section */}
     <section
-      className="relative pt-20 pb-16 bg-secondary-950 bg-blend-overlay bg-cover bg-center text-white"
+      className="pt-0 pb-20 bg-secondary-950 bg-blend-overlay bg-cover bg-center text-white"
       style={{
         backgroundImage:
           'url("https://raw.githubusercontent.com/Kagwi/Neonsol-Creatives/refs/heads/main/public/pexels-david-geib-1265112-3220850.jpg")',
@@ -77,7 +77,7 @@ const MobileDevelopment = () => (
     </section>
 
     {/* Scroll Down Indicator */}
-    <div className="flex justify-center items-center -mt-10 mb-10">
+    <div className="flex justify-center items-center mt-[-40px] mb-10">
       <motion.div
         animate={{ y: [0, 10, 0] }}
         transition={{ duration: 1.5, repeat: Infinity }}
@@ -88,7 +88,7 @@ const MobileDevelopment = () => (
 
     {/* Overview Section */}
     <div
-      className="w-full bg-cover bg-center bg-no-repeat py-20 text-center text-white"
+      className="w-full bg-cover bg-center bg-no-repeat py-32 text-center text-white"
       style={{ backgroundAttachment: "fixed" }}
     >
       <div className="max-w-3xl mx-auto px-6">
