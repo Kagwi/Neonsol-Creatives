@@ -93,12 +93,12 @@ const UiUxDesign = () => (
     {/* Overview Section */}
     <div
       id="overview"
-      className="w-full bg-cover bg-center bg-no-repeat pt-8 pb-16 text-center text-white"
+      className="w-full bg-cover bg-center bg-no-repeat pt-4 pb-0 text-center text-white"
       style={{ backgroundAttachment: "fixed" }}
     >
       <div className="max-w-3xl mx-auto px-6">
         <motion.h1
-          className="text-5xl font-bold mb-6"
+          className="text-5xl font-bold"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
@@ -106,7 +106,7 @@ const UiUxDesign = () => (
           Design That Feels as Good as It Looks
         </motion.h1>
         <motion.p
-          className="text-xl text-white/80 mb-8"
+          className="text-xl text-white/80"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.2 }}
@@ -116,8 +116,8 @@ const UiUxDesign = () => (
       </div>
     </div>
 
-    {/* Features Section (no top padding) */}
-    <section className="pb-16 px-6 max-w-6xl mx-auto text-center">
+    {/* Features Section */}
+    <section className="pt-8 pb-16 px-6 max-w-6xl mx-auto text-center">
       <h2 className="text-3xl font-bold mb-12">What We Offer</h2>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
         {designFeatures.map((feature, idx) => (
@@ -134,7 +134,7 @@ const UiUxDesign = () => (
     </section>
 
     {/* Process Section */}
-    <section className="pt-8 pb-16 bg-gray-50 px-6">
+    <section className="py-20 bg-gray-50 px-6">
       <div className="max-w-4xl mx-auto">
         <h2 className="text-3xl font-bold text-center mb-12">Our UI/UX Design Process</h2>
         <div className="flex flex-col gap-12">
@@ -159,7 +159,7 @@ const UiUxDesign = () => (
     </section>
 
     {/* Call to Action */}
-    <section className="pt-8 pb-16 px-6 text-center">
+    <section className="py-20 px-6 text-center">
       <h2 className="text-3xl font-bold mb-4">Start Designing a Better Experience</h2>
       <p className="text-gray-700 mb-8 max-w-xl mx-auto">
         Whether launching a new product or improving an existing one, our design team is ready to
