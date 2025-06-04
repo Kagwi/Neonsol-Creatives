@@ -73,3 +73,7 @@
 .animate-fade-in-right {
   animation: fade-in-right 0.8s ease-out both;
 }
+body, html, #root {
+  margin: 0;
+  padding: 0;
+}
