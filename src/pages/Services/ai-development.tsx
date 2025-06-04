@@ -122,7 +122,7 @@ const AiDevelopment = () => {
       </div>
 
       {/* Features Section */}
-      <section className="py-20 px-6 max-w-6xl mx-auto text-center bg-gradient-to-r from-orange-50 to-white rounded-xl shadow-lg">
+      <section className="pt-10 pb-20 px-6 max-w-6xl mx-auto text-center bg-gradient-to-r from-orange-50 to-white rounded-xl shadow-lg">
         <h2 className="text-3xl md:text-4xl font-bold mb-12 text-orange-700">What We Offer</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
           {aiFeatures.map((feature, idx) => (
