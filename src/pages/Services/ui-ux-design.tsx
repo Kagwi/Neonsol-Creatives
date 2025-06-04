@@ -116,8 +116,8 @@ const UiUxDesign = () => (
       </div>
     </div>
 
-    {/* Features Section */}
-    <section className="pt-8 pb-16 px-6 max-w-6xl mx-auto text-center">
+    {/* Features Section (no top padding) */}
+    <section className="pb-16 px-6 max-w-6xl mx-auto text-center">
       <h2 className="text-3xl font-bold mb-12">What We Offer</h2>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
         {designFeatures.map((feature, idx) => (
