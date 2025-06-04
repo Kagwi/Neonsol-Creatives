@@ -1,6 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
-import { ArrowRight } from "lucide-react";
+import { ArrowRight, ChevronDown } from "lucide-react";
 import { Link } from "react-router-dom";
 
 const designFeatures = [
@@ -56,7 +56,7 @@ const UiUxDesign = () => (
   <div className="bg-white text-gray-900">
     {/* Hero Section */}
     <section
-      className="relative pt-32 pb-20 bg-secondary-950 bg-blend-overlay bg-cover bg-center text-white"
+      className="pt-32 pb-6 bg-secondary-950 bg-blend-overlay bg-cover bg-center text-white"
       style={{
         backgroundImage:
           'url("https://raw.githubusercontent.com/Kagwi/Neonsol-Creatives/refs/heads/main/public/pexels-david-geib-1265112-3220850.jpg")',
@@ -78,28 +78,22 @@ const UiUxDesign = () => (
           </p>
         </div>
       </div>
-
-      {/* Scroll Down Indicator */}
-      <div className="absolute bottom-10 left-1/2 transform -translate-x-1/2 animate-bounce cursor-pointer">
-        <a href="#overview" aria-label="Scroll down">
-          <svg
-            className="w-8 h-8 text-white"
-            fill="none"
-            stroke="currentColor"
-            strokeWidth="2"
-            viewBox="0 0 24 24"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7"></path>
-          </svg>
-        </a>
-      </div>
     </section>
+
+    {/* Scroll Down Indicator */}
+    <div className="flex justify-center items-center mt-[-40px] mb-10">
+      <motion.div
+        animate={{ y: [0, 10, 0] }}
+        transition={{ duration: 1.5, repeat: Infinity }}
+      >
+        <ChevronDown className="w-8 h-8 text-gray-300" />
+      </motion.div>
+    </div>
 
     {/* Overview Section */}
     <div
       id="overview"
-      className="w-full bg-cover bg-center bg-no-repeat py-32 text-center text-white"
+      className="w-full bg-cover bg-center bg-no-repeat pt-8 pb-16 text-center text-white"
       style={{ backgroundAttachment: "fixed" }}
     >
       <div className="max-w-3xl mx-auto px-6">
@@ -123,7 +117,7 @@ const UiUxDesign = () => (
     </div>
 
     {/* Features Section */}
-    <section className="py-20 px-6 max-w-6xl mx-auto text-center">
+    <section className="pt-8 pb-16 px-6 max-w-6xl mx-auto text-center">
       <h2 className="text-3xl font-bold mb-12">What We Offer</h2>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
         {designFeatures.map((feature, idx) => (
@@ -140,7 +134,7 @@ const UiUxDesign = () => (
     </section>
 
     {/* Process Section */}
-    <section className="py-20 bg-gray-50 px-6">
+    <section className="pt-8 pb-16 bg-gray-50 px-6">
       <div className="max-w-4xl mx-auto">
         <h2 className="text-3xl font-bold text-center mb-12">Our UI/UX Design Process</h2>
         <div className="flex flex-col gap-12">
@@ -165,7 +159,7 @@ const UiUxDesign = () => (
     </section>
 
     {/* Call to Action */}
-    <section className="py-20 px-6 text-center">
+    <section className="pt-8 pb-16 px-6 text-center">
       <h2 className="text-3xl font-bold mb-4">Start Designing a Better Experience</h2>
       <p className="text-gray-700 mb-8 max-w-xl mx-auto">
         Whether launching a new product or improving an existing one, our design team is ready to
